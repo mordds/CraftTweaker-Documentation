@@ -12,7 +12,7 @@
 两者都无法再次被修改。  
 不同之处在于两者如何被调用：  
 全局变量可以在脚本的任意处，简单的使用变量名来进行调用。除非本地脚本中有同名变量覆盖了它；   
-静态变量则需要通过[跨脚本调用](Cross-Script_Reference)方式才能访问。
+静态变量则需要通过[跨脚本调用](Cross-Script_Reference/)方式才能访问。
 
 全局变量创建需要使用 `global` 关键字；  
 静态变量创建需要 `static` 关键字。
@@ -35,12 +35,12 @@ static myStaticValue as IItemStack = <minecraft:sand>;
 
 1. `global` 关键字，表明这是一个全局变量；
 2. `myGlobalValue` 变量名；
-3. `as IItemStack` 变量类型（非常推荐在构建变量之前，先[导入](Import)相关类型）
+3. `as IItemStack` 变量类型（非常推荐在构建变量之前，先[导入](Import/)相关类型）
 4. `= <minecraft:dirt>;` 变量初始化。因为全局变量是不可变的，所以你需要在初始化的时候一并声明它！
 
 ## 一些建议
 
-- 你可以随意访问已经声明好的全局变量，使用[预处理优先级](/AdvancedFunctions/Preprocessors/PriorityPreprocessor)来确保全局变量所在的脚本能够优先执行。
+- 你可以随意访问已经声明好的全局变量，使用[预处理优先级](/AdvancedFunctions/Preprocessors/PriorityPreprocessor/)来确保全局变量所在的脚本能够优先执行。
 - 全局变量不能在子文件夹下的脚本中声明！否则编译的时候就会提示 `FieldNotFound Exception`！
 - 虽然`as`后面的部分完全可以省略，但是我们还是极为推荐你保留下它，毕竟`IAny` 接口尚未完全可用；其次，这样做也利于其他人阅读或者排错！
 - 本地变量**能够**覆盖全局变量。脚本总是优先检索最近作用域中的变量，最后才会检索到全局变量！
