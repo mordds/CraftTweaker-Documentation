@@ -1,22 +1,22 @@
-# 跨脚本调用
+# Cross-Script Reference
 
-所有拥有 [静态变量](/Advanced_Functions/Global_Static_Variables) 或者 [自定义函数](/Advanced_Functions/Custom_Functions) 的脚本，都会被注册并可用于跨脚本调用。   
-这将允许你使用 `.` 符号访问其他脚本的方法或者变量。
+All scripts that have [static variables](/Advanced_Functions/Global_Static_Variables/) or [custom functions](/Advanced_Functions/Custom_Functions/) are registered to the cross-script reference.  
+This allows you to access these fields/functions using the dot-notation.
 
-## 使用规范
+## Specifications
 
-- 跨脚本调用都以 `scripts.` 开头
-- 指定脚本文件夹相对路径。（比如 `scripts.mySubfolder.a.zs`）
-- [导入语句](/Advanced_Functions/Import) 中也可以使用点符号，如果你喜欢的话；
-- ZS 首先会匹配目录，接下来才会匹配文件或者值。
+- Cross-script references start with `scripts.`
+- You specify the path relative from the scripts folder (e.g. `scripts.mySubfolder.a.zs`)
+- You can use the dot-notation in an [import statement](/Advanced_Functions/Import/) should you choose to do so.
+- ZS first checks for matching directories then for matching files or values.
 
 
 
-## 举例
-这里有两个脚本：`a.zs` 和 `b.zs`。
+## Example
+Let's say we have two scripts: `a.zs` and `b.zs`.
 
-a.zs：
-```js
+a.zs:
+```kotlin
 static myVal as string = "myVal";
 
 function makeLine() {
@@ -24,8 +24,8 @@ function makeLine() {
 }
 ```
 
-b.zs：
-```python
+b.zs
+```kotlin
 print(scripts.a.myVal);
 scripts.a.makeLine();
 ```

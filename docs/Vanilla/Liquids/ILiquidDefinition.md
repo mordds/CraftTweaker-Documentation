@@ -1,17 +1,16 @@
-# 流体定义（ILiquidDefinition）
-流体定义，定义着 [流体堆](ILiquidStack) 所包含的流体。  
-不同于流体堆，这个接口能够允许你修改流体属性。
+# ILiquidDefinition
+The ILiquidDefinition defines the liquid an [ILiquidStack](/Vanilla/Liquids/ILiquidStack/) consists of.
+Unlike the ILiquidStack, this interface allows you to change fluid properties.
 
-## 导入相关包
-
-为了避免发生一些不期而遇的问题（比如声明[数组](/AdvancedFunctions/Arrays_and_Loops)），最为安全、也是最为推荐的方式就是导入相关的包。 
+## Importing the package
+It might be required for you to import the package if you encounter any issues (like casting an [Array](/AdvancedFunctions/Arrays_and_Loops/)), so better be safe than sorry and add the import.  
 `import crafttweaker.liquid.ILiquidDefinition;`
 
-## 方法
-仔细想想我们能做些什么？
+## Methods
+So, what can we do with it?
 
 ### Multiplication
-Multiplying a ILiquidDefinition results in a new [ILiquidStack](ILiquidStack) with the specified amount in millibuckets
+Multiplying a ILiquidDefinition results in a new [ILiquidStack](/Vanilla/Liquids/ILiquidStack/) with the specified amount in millibuckets
 
 ```
 val def = <liquid:lava>.definition;
@@ -30,7 +29,7 @@ Like in the table above, you set the Zengetter/Setter at the end of the ILiquidD
 Some ZenGetters have no according ZenSetter, you will need to rely on other means to alter these properties.
 
 Be careful with Zensetters though, they only alter the fluid registry and have no effect on fluids in the world.
-You will probably only need the temperature setter when messing with [Tinkers' Construct Smeltery fuels](/Mods/Modtweaker/TConstruct/Fuel).
+You will probably only need the temperature setter when messing with [Tinkers' Construct Smeltery fuels](/Mods/Modtweaker/TConstruct/Fuel/).
 
 ```
 val definition = <liquid:lava>.definition;
