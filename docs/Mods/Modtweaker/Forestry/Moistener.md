@@ -1,4 +1,4 @@
-# 加湿器
+# 加湿器（Moistener）
 
 ModTweaker 允许你添加或移除林业加湿器配方
 
@@ -41,7 +41,7 @@ mods.forestry.Moistener.addFuel(<minecraft:gold_ingot>, <minecraft:iron_ingot>, 
 
 |参数             |类型                                    | 描述                                                                                       |
 |----------------|----------------------------------------|--------------------------------------------------------------------------------------------|
-|item            |物品堆（[IItemStack](/Vanilla/Items/IItemStack)）|需要添加的物品                                                                      |
-|product         |物品堆（[IItemStack](/Vanilla/Items/IItemStack)）|会被移出加湿器工作区域的物品（例：发霉小麦或覆盖戍）                                     |
+|item            |[IItemStack（物品堆）](/Vanilla/Items/IItemStack)|需要添加的物品                                                                      |
+|product         |[IItemStack（物品堆）](/Vanilla/Items/IItemStack)|会被移出加湿器工作区域的物品（例：发霉小麦或覆盖戍）                                     |
 |MoistenerValue  |整型                                    |物品对合成最终产物的催化的贡献数量                                                               |
-|stage           |整数                                    |物品的阶段。阶段较低的物品会在加湿器中先被消耗                                                   |
+|stage           |整型                                    |物品的阶段。阶段较低的物品会在加湿器中先被消耗                                                   |
