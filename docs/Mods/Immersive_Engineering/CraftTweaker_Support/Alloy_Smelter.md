@@ -1,4 +1,4 @@
-# 合金窑
+# 合金窑（Alloy Smelter）
 合金窑相关包可以被用于为沉浸工程的合金窑添加或移除配方。
 
 ## 导入相关包
@@ -8,10 +8,10 @@
 
 |是否必要   |类型              |数据类型                                            |
 |----------|------------------|---------------------------------------------------|
-|必要       |Output（输出）   |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)            |
-|必要       |Input 1 （输入1）|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient) |
-|必要       |Input 2 （输入2）|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient) |
-|必要       |Time （时间）    |整数                                            |
+|必要       |Output（输出）   |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)            |
+|必要       |Input 1 （输入1）|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/) |
+|必要       |Input 2 （输入2）|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/) |
+|必要       |Time （时间）    |整型                                            |
 
 
 ### 例子
@@ -27,7 +27,7 @@ mods.immersiveengineering.AlloySmelter.addRecipe(<minecraft:diamond>, <ore:ingot
 
 |类型         |数据类型                                         |
 |-------------|------------------------------------------------|
-|Output（输出）|[IItemstack（物品堆）](/Vanilla/Items/IItemStack)|
+|Output（输出）|[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)|
 
 
 ### 例子
