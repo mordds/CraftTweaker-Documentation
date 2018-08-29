@@ -1,31 +1,31 @@
-# 重命名
+# Renaming
 
-总觉得有些名字很烦人？  
+Always reading 'chest' is annoying, isn't it?  
 
-别担心，我们有重命名系统。
+That's why there's the possibility to rename stuff.
 
-## 改变显示名称
+## Changing the display name
 
-改变物品或者方块的名称很简单。
-你可以将 `item` 处物品名称修改为 `newName`：
-```js
+This is probably the easiest way to achieve a different item or block name.
+You rename `item` to `newName`:
+```
 item.displayName = newName;
 
-//示例
-<minecraft:chest>.displayName = "存储盒豪华版";
+//Example
+<minecraft:chest>.displayName = "Storage Box Deluxe";
 ```
-`item` 即为一个 [物品堆](/Vanilla/Items/IItemStack).  
-`newName` 为一个字符串。
+`item` is an [IItemStack](/Vanilla/Items/IItemStack/).  
+`newName` is a String.
 
-## 改变本地化名称
+## Changing the localization
 
-一些模组的存储栏仍然显示旧有名称，你可能需要通过本地化名称来修改它。  
-你可以通过阅读 `游戏` 条目来了解什么是本地化。
-```js
+If some modded inventories still show the item's old name instead of the new one, you need to change the localization.
+You can read what that means on the `game` entry.
+```
 game.setLocalization(languageCode,unlocalizedName,newName);
 
-game.setLocalization("tile.chest.name","存储盒豪华版")
+game.setLocalization("tile.chest.name","StorageBox Deluxe")
 ```
-`languageCode` 是一个可选的字符串，如果你指定了它，那么能无视客户端语言设置来指定名称。  
-`unlocaLizedName` 为字符串。  
-`newName` 为字符串。
+`languageCode` is a string and optional. If you omit it, it will apply the localization regardless of the client's set language.  
+`unlocaLizedName` is a string.  
+`newName` is a string.

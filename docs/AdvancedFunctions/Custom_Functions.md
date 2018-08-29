@@ -74,7 +74,7 @@ function add(a as int,b as int) as int{
 
 ## 以函数作为参数
 你当然也可以像使用参数一样使用函数。在这种情况下，他们在单独的一个类中被创建。除此之外和普通的静态函数一模一样，你可以直接使用它们的变量名来调用它们。  
-你甚至可以把它们设定为[全局参数](/AdvancedFunctions/Global_Static_Variables)。
+你甚至可以把它们设定为[全局参数](/AdvancedFunctions/Global_Static_Variables/)。
 
 如果你想要创建一个函数作参数（并且还是全局参数），你可以这么书写：
 ```

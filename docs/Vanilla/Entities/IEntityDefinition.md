@@ -1,110 +1,110 @@
-# 实体定义
+# IEntityDefinition
 
-这听上去有点可怕，它到底是什么意思呢？
-基本上，他引用了一个在游戏中注册了的实体。所以可以说它引用游戏了中的一个生物。
+This sounds scary, so what does it mean?
+Basically, it is a reference to an entity registered in the game, so it is a reference to, say a mob in the game.
 
-## 导入相关包
-为了避免发生一些不期而遇的问题（比如声明 [数组](/AdvancedFunctions/Arrays_and_Loops)），最为安全、也是最为推荐的方式就是导入相关的包。
+## Importing the package
+It might be required for you to import the package if you encounter any issues (like casting an [Array](/AdvancedFunctions/Arrays_and_Loops/)), so better be safe than sorry and add the import.  
 `import crafttweaker.entity.IEntityDefinition;`
 
-## 获取实体定义对象
-```js
-//这些将返回实体定义对象
+## Calling an IEntityDefinition Object
+```
+//These return an IEntityDefinition Object
 val test = <entity:minecraft:sheep>;
 val test2 = game.getEntity("sheep");
 
 ```
 
-## 函数
-事情从这里开始变得有趣了:
-既然我们已经获取了这个对象，我们能用它来干些什么?
+## Functions
+So, this is where it gets interesting:
+What can we do with it, now that we created that thing?
 
 ### id
 
-以字符串形式返回ID
-```js
-//返回 "net.minecraft.entity.passive.EntitySheep"
+Returns the ID as string
+```
+//returns "net.minecraft.entity.passive.EntitySheep"
 <entity:minecraft:sheep>.id;
 ```
 
-### 名称
+### name
 
-以字符串形式返回名称
-```js
-//返回 "Sheep"
+Returns the name as string
+```
+//returns "Sheep"
 <entity:minecraft:sheep>.name;
 ```
 
-### 创建实体
-第一个方法只能在给定位置创建实体。  
-第二个则会生成它。
+### create entity
+The first method only creates an entity on the given location.  
+The second one also spawns it.
 ```
 <enity:minecraft:sheep>.createEntity(world);
 <enity:minecraft:sheep>.spawnEntity(world, blockPos);
 ```
 
-`world` 是一个 [世界](/Vanilla/World/IWorld) 对象。
-`blockPos` 是一个 [方块坐标](/Vanilla/World/IBlockPos) 对象。
+`world` is an [IWorld](/Vanilla/World/IWorld/) object.  
+`blockPos` is an [IBlockPos](/Vanilla/World/IBlockPos/) object.
 
 
-## 掉落物
+## Drops
 
-我们甚至可以增加和/或移除生物的掉落物。这不是很棒吗？
+We can even add and/or remove mob drops, isn't that great?
 
-### 常见掉落物
+### Add normal Drop
 
-以下方法将加入常见掉落物。常见掉落物是指无论用何种方法杀死这个生物都有可能掉落这种物品。T
-```js
+This adds a normal drop, a drop that can occur whenever the mob is killed by whatever means.
+```
 val entity = <entity:minecraft:sheep>;
 
-//addDrop(物品,最小数量,最大数量,几率);
+//addDrop(item,min,max,chance);
 entity.addDrop(<minecraft:apple>);
 
-//addDrop(加权物品,最小数量,最大数量);
+//addDrop(weightedItem, min, max);
 entity.addDrop(<minecraft:stone> % 20);
 ```
 
-`物品` 是被加入作为掉落物的物品，类型为[物品堆](/Vanilla/Items/IItemStack)或者[加权物品堆](/Vanilla/Items/WeightedItemStack).  
-`最小` 是最少掉落物品的数量，类型为整数。它是可选参数。
-`最大` 是最多掉落物品的数量，类型为整数。它是可选参数。
-`几率` 是掉落物品的概率。它是可选参数。如果使用[加权物品堆](/Vanilla/Items/WeightedItemStack)而不是`物品`则不需要这个变量
+`item` is the item to be added as drop and an [IItemStack](/Vanilla/Items/IItemStack/) or a [WeightedItemStack](/Vanilla/Items/WeightedItemStack/).  
+`min` is the minimum amount that is dropped and an Integer. This is optional.  
+`max` is the maximum amount that is dropped and an Integer. This is optional.  
+`chance` is the drop chance. This is optional. Not needed if you use a [weightedItemStack](/Vanilla/Items/WeightedItemStack/) instead as `item`
 
-### 仅玩家可获取掉落物
+### Add playeronly drop
 
-和普通掉落物一致，但是只有在实体被玩家杀死的情况下才会掉落。
-```js
-//addPlayerOnlyDrop(物品,最小数量,最大数量,几率);
+Same as normal drops, but only if the entity was killed by a player.
+```
+//addPlayerOnlyDrop(item,min,max,chance);
 entity.addPlayerOnlyDrop(<minecraft:gold_ingot>, 10,64);
 
-//addPlayerOnlyDrop(加权物品, 最小数量, 最大数量);
+//addPlayerOnlyDrop(weightedItem, min, max);
 entity.addPlayerOnlyDrop(<minecraft:iron_ingot> % 20, 1, 3);
 ```
 
-### 掉落物函数
+### Add drop Function
 
-掉落物函数只有在相关实体死亡的时候才会被调用。如果你想要给掉落物增加一些判定条件就可以使用它，比如在特定生物群系掉落特定物品。  
-你可能需要 [实体掉落物函数](IEntityDropFunction)：
-```js
+A drop function is called whenever the associated Entity is killed. You can use this if you need to check requirements for before you drop something, like only dropping in a certain biome and stuff.  
+You will need an [IEntityDropFunction](/Vanilla/Entities/IEntityDropFunction/):
+```
 <entity:minecraft:sheep>.addDropFunction(function(entity, dmgSource) {
 	return <minecraft:iron_ingot> * 10;
 	});
 ```
 
 
-### 移除掉落物
+### Remove
 
-这样可以移除某个掉落物
-```js
+This removes a drop.
+```
 val entity = <entity:minecraft:sheep>;
 
 //removeDrop(item);
 entity.removeDrop(<minecraft:wool>);
 ```
-`物品` 就是需要移除的掉落物，是一个[物品堆](/Vanilla/Items/IItemStack)类型。
+`item` is the item to be removed from being a drop and an [IItemStack](/Vanilla/Items/IItemStack/).
 
-### 清除掉落物
+### Clear Drops
 
-这将会移除所有的掉落物
+This removes all drops.
 ```
 val entity = <entity:minecraft:sheep>;
 
@@ -112,10 +112,10 @@ val entity = <entity:minecraft:sheep>;
 entity.clearDrops;
 ```
 
-### 获取掉落物列表
+### Get
 
-能够返回所有通过 CraftTweaker 添加的[实体掉落物](IEntityDrop)对象列表
-```js
+This returns all drops that were added via CT as list of [IEntityDrop](/Vanilla/Entities/IEntityDrop/) Objects.
+```
 val entity = <entity:minecraft:sheep>;
 
 //getDrops();

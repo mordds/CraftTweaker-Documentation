@@ -1,23 +1,23 @@
-# 附魔（IEnchantment）
+# IEnchantment
 
-附魔对象基本上就是一个[附魔定义](IEnchantmentDefinition)对象和一个附魔等级.  
+An IEnchantment essentially is an [IEnchantmentDefinition](/Vanilla/Enchantments/IEnchantmentDefinition/) and an enchantment level.  
 
-## 导入相关包
-为了避免发生一些不期而遇的问题（比如声明数组），最为安全、也是最为推荐的方式就是导入相关的包。  
+## Importing the package
+It might be required for you to import the package if you encounter any issues (like casting an [Array](/AdvancedFunctions/Arrays_and_Loops/)), so better be safe than sorry and add the import.  
 `import crafttweaker.enchantments.IEnchantment;`
 
 ## ZenGetters/ZenSetters
 
-|  ZenGetter  |  ZenSetter  |                类型                |
-| :---------: | :---------: | :--------------------------------: |
-| definition  |             | [附魔定义](IEnchantmentDefinition) |
-|    level    |             |                整数                |
-| displayName | displayName |               字符串               |
+| ZenGetter   | ZenSetter   | Type                                             |
+|-------------|-------------|--------------------------------------------------|
+| definition  |             | [IEnchantmentDefinition](/Vanilla/Enchantments/IEnchantmentDefinition/) |
+| level       |             | int                                              |
+| displayName | displayName | String                                           |
 
 ## ZenMethods
-### 检索附魔的NBT标签形式
-你也许需要获取一个附魔的NBT标签
-你可以用[数据](/Vanilla/Data/IData)获取也可以用以下方法: 
+### Retrieve the Enchantment as NBT
+You might want to get the Enchantment's NBT-Tag.  
+You can either cast it as [IData](/Vanilla/Data/IData/) or use the method: 
 ```
 ench.makeTag();
 ench as crafttweaker.data.IData;

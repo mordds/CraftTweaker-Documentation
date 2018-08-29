@@ -1,18 +1,18 @@
-# 方块事件（IBlockEvent）
+# IBlockEvent
 
-这个接口被所有拥有有生命实体的事件所继承。
+This interface is extended by all Events that can have a central living entity.
 
-## 导入相关类
-最好在使用前 [导入](/AdvancedFunctions/Import) 类来避免错误。   
+## Importing the class
+It might be required to [import](/AdvancedFunctions/Import/) the class to avoid errors.  
 `import crafttweaker.event.IBlockEvent;`
 
-## 继承自实体可获取位置接口
-这个接口继承了 [实体可获取位置](IEventPositionable) 接口，这意味着实体可获取位置接口的所有功能都可以在这里使用。
+## Extending IEventPositionable
+This interface extends [IEventPositionable](/Vanilla/Events/Events/IEventPositionable/), which means that all functionality that IEventPositionable offers is also present in IBlockEvent
 
 ## ZenGetters
 
 | name             | type                                                     |
 |------------------|----------------------------------------------------------|
-| world            | [IWorld](/Vanilla/World/IWorld)                          |
-| blockState       | [IBlockState](/Vanilla/Blocks/IBlockState)               |
-| block            | [IBlock](/Vanilla/Blocks/IBlock)                         |
+| world            | [IWorld](/Vanilla/World/IWorld/)                          |
+| blockState       | [IBlockState](/Vanilla/Blocks/IBlockState/)               |
+| block            | [IBlock](/Vanilla/Blocks/IBlock/)                         |

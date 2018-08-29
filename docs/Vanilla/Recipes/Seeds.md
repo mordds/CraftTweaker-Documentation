@@ -1,50 +1,50 @@
-# 种子
-种子是玩家破坏草获得的东西
+# Seeds
+Seeds are things you get from punching tall grass.
 
-## 在日志中输出所有种子
+## Print all seeds to the log
 
-这个指令会在日志中输出所有注册的种子。
+This command will print all registered seeds to the log.
 
-它需要由玩家或者控制台使用才有效，不能写在zs文件内。
+Needs to be performed by a player or console, cannot be written in a zs-file.
 ```
 1.12
 /ct seeds
 
-1.12之前
+pre-1.12
 /mt seeds
 ```
 
-## 添加一个种子掉落
+## Add a seed drop
 
-添加一个作为种子掉落的`物品`。
-**权重是相对于原版种子的，它的权重为10(≙ 1000%)!**
+Adds `item` as seed drop.  
+**Weights are relative to grass seed, which has a weight of 10 (≙ 1000%)!**
 
 ```
 vanilla.seeds.addSeed(item);
 ```
 
-`item（物品）`类型为[weightedItemStack（加权物品堆）](/Vanilla/Items/WeightedItemStack).
-这是什么意思？这就是说你需要在后面需要一个百分比，例如：
+`item` is a [weightedItemStack](/Vanilla/Items/WeightedItemStack/).
+What does that mean? It simply means that you need to give it a percentage like this:
 
 ```
-//添加权重为1的胡萝卜
+//adds carrots with a weight of 1
 vanilla.seeds.addSeed(<minecraft:carrot> % 100);
 ```
 
 
-## 移除一个种子掉落
+## Remove a seed drop
 
-将`物品`从种子掉落中移除
+Stops `item` from being a seed drop.
 ```
 vanilla.seeds.removeSeed(item);
 ```
-`item（物品）`类型为[IIngredient](/Vanilla/Variable_Types/IIngredient).
+`item` is an [IIngredient](/Vanilla/Variable_Types/IIngredient/).
 
 
 
-## 检索所有注册的种子
+## Retrieve all registered Seeds
 
-以[加权物品堆](/Vanilla/Items/WeightedItemStack)列表形式返回所有种子。
+Returns all items as a [weightedItemStack](/Vanilla/Items/WeightedItemStack/) List.
 ```
 val seedList = vanilla.seeds.seeds;
 

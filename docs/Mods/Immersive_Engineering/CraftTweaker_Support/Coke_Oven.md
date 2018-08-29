@@ -1,32 +1,32 @@
-# 焦炉
+# Coke Oven
 
-## 导入相关包
-使用`mods.immersiveengineering.CokeOven`以导入焦炉相关包。
+## Calling The Package
+You can call the CokeOven package using `mods.immersiveengineering.CokeOven`.
 
-## 添加配方
-|是否必要   |类型      	|数据类型                                			 |
+## Add Recipe
+|Required  |Type    	|Data Type                                			 |
 |----------|------------|----------------------------------------------------|
-|必要      |Output（输出）  	|[IItemstack（物品堆）](/Vanilla/Items/IItemStack)  			 |
-|必要      |Fuel Output（燃料） |整数  										 |
-|必要      |Input（输入）    	|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient)  |
-|必要      |Time（时间）    	|整数  			 							 	 |
+|Required  |Output  	|[IItemstack](/Vanilla/Items/IItemStack/)  			 |
+|Required  |Fuel Output |Integer  											 |
+|Required  |Input    	|[IIngredient](/Vanilla/Variable_Types/IIngredient/)  |
+|Required  |Time    	|Integer  			 							 	 |
 
-### 例子
+### Example
 ```JAVA
-//例:
+//Example:
 mods.immersiveengineering.CokeOven.addRecipe(IItemStack output, int fuelOutput, IIngredient input, int time);
 mods.immersiveengineering.CokeOven.addRecipe(<minecraft:coal>, 2, <ore:logWood>, 2000);
 ```
 
 
-## 移除配方
-|类型              |数据类型                                     |
+## Remove Recipe
+|Type              |Data Type                                          |
 |------------------|---------------------------------------------------|
-|Output(输出）      |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)          |
+|Output            |[IItemstack](/Vanilla/Items/IItemStack/)            |
 
-### 例子
+### Example:
 ```JAVA
-//例:
+//Example:
 mods.immersiveengineering.CokeOven.removeRecipe(IItemStack output);
 mods.immersiveengineering.CokeOven.removeRecipe(<minecraft:diamond>);
 ```
