@@ -16,7 +16,7 @@
 
 ## 移除
 
-以下函数取消注册`流体（fluid）`，数据类型为[流体堆（ILiquidStack）](/Vanilla/Variable_Types/ILiquidStack)：
+以下函数取消注册`流体（fluid）`，数据类型为[流体堆（ILiquidStack）](/Vanilla/Liquids/ILiquidStack/)：
 
 ```
 mods.pneumaticcraft.xpfluid.removeXPFluid(ILiquidStack fluid);
