@@ -9,7 +9,7 @@
 
 ## 移除
 
-以下函数会使 `fluid`（数据类型为[流体堆（ILiquidStack）](/Vanilla/Variable_Types/ILiquidStack)）无法作为液体燃料：
+以下函数会使 `fluid`（数据类型为[流体堆（ILiquidStack）](/Vanilla/Liquids/ILiquidStack/)）无法作为液体燃料：
 
 ```
 mods.pneumaticcraft.liquidfuel.removeFuel(ILiquidStack fluid);
