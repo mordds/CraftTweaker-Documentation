@@ -8,7 +8,7 @@
 
 | 类型                     | 数据类型                                                   | 例子                                   |
 | ------------------------ | ---------------------------------------------------------- | -------------------------------------- |
-| 可以使用研钵种类         | 字符串（数组)                                              | ["wooden", "stone", "iron", "diamond"] |
+| 可以使用的研钵种类        | 字符串（数组）                                             | ["wooden", "stone", "iron", "diamond"] |
 | 输出                     | [物品堆（IItemstack）](/Vanilla/Items/IItemStack/)          | <minecraft:diamond\>                   |
 | 合成一份所需要的单击次数 | 整型                                                       | 2000                                   |
 | 输入                     | [材料（IIngredient）](/Vanilla/Variable_Types/IIngredient/) | [<ore:logWood\>, <ore:plankWood\>]     |
