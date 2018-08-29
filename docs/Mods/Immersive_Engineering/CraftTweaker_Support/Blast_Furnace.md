@@ -11,7 +11,7 @@
 |----------|---------------|----------------------------------------------------|
 |必要      |Output（输出）  |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)  			 |
 |必要      |Input（输入）   |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/)  |
-|必要      |Time（时间）    |整数 											 |
+|必要      |Time（时间）    |整型 											 |
 |可选      |Slag（炉渣）    |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)  			 |
 
 
