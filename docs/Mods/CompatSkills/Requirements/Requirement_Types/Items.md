@@ -1,40 +1,43 @@
-# Items:
-Items is a Requirement-Type introduced by CompatSkills and allows you to gate things behind holding a specific Item/NBT-Value/Mod-Item in either your Main or Off-Hand.
-The Item Syntax is as follows:
+# 物品:
+物品是 CompatSkills 加入的需求，允许你用物品作为需求锁定游戏内容。通过在主手或副手持有指定物品或带有 NBT 数据的物品或某个模组的物品解锁。
+物品的用法如下：
 ```
-Example:
-// Adds the requirement of you holding ANY item from the specified mod.
+例子:
+// 指定模组的任意物品
 stack|modid
 
-// Adds the requirement of you holding the specified item with Meta 0
+// 方块实体附加值为0的指定物品
 stack|modid:item
 
-// Adds the requirement of you holding the specified item with the specified Meta (* = Wildcard Metadata)
+// 有指定方块实体附加值的指定物品（* = 任意方块实体附加值）
 stack|modid:item:meta
 
-// Adds the requirement of you holding ANY item with the specified NBT-data
+// 指定 NBT 数据的任意物品
 stack||NBT as JSON
 
-// Adds the requirement of you holding ANY item from the specified mod with the specified NBT-data.
+// 指定 NBT 数据且来自指定模组的任意物品
 stack|modid|NBT as JSON
 
-// Adds the requirement of you holding the specified item with meta 0 and the specified NBT-data
+// 指定 NBT 数据且方块实体附加值为0的指定物品
 stack|modid:item|NBT as JSON
 
-// Adds the requirement of you holding the specified item with the specified Meta and the specified NBT-data
+// 指定 NBT 数据且有指定方块实体附加值的指定物品
 stack|modid:item:meta|NBT as JSON
 
+//modid 模组 id
+//item 物品名称
+//meta 方块实体附加值
+//NBT as JSON JSON 格式的 NBT 数据
 
-
-// Working Examples:
+// 实例:
 stack|minecraft
 stack|minecraft:iron_pickaxe
 stack|minecraft:iron_pickaxe:*
 
-//Needs a silk touch item
+//有精准采集魔咒的物品
 stack||{ench:[{id: 33s}]} 
 
-//fortune tinkers tool
+//时运强化的匠魂物品
 stack|tconstruct|{ench:[{id: 35s}]} 
 
 stack|minecraft:iron_sword|{ench:[{id: 17s}]}
