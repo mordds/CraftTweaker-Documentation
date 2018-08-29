@@ -1,10 +1,11 @@
-# GameStages:
-GameStages is a Requirement introduced by CompatSkills and allows you to gate items behind GameStages.
-The GameStage Syntax is as follows:
+# 游戏阶段:
+游戏阶段是 CompatSkills 加入的需求，允许你将游戏阶段作为需求锁定游戏内容。
+游戏阶段的用法如下:
 ```
-Example:
+例子:
 stage|stageName
+//stageName 阶段名称
 
-Working Example:
+实例:
 stage|test
 ```
