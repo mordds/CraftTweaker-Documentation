@@ -1,4 +1,4 @@
-# 砂轮
+# 砂轮（Grindstone）
 
 你可以使用Craft tweaker添加或移除星辉魔法砂轮的配方。
 
