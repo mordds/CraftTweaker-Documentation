@@ -1,44 +1,43 @@
-# 游戏（IGame）
+# Game Class
 
-游戏接口用于获取基本游戏信息。
-可以直接通过 `game` 调用。
+The IGame Class is used to obtain general game information.
+Can be accessed using `game`
 
-
-## 导入相关包
-为了避免发生一些不期而遇的问题（比如声明[数组](/AdvancedFunctions/Arrays_and_Loops)），最为安全、也是最为推荐的方式就是导入相关的包。   
+## Importing the package
+It might be required for you to import the package if you encounter any issues (like casting an [Array](/AdvancedFunctions/Arrays_and_Loops/)), so better be safe than sorry and add the import.  
 `import crafttweaker.game.IGame;`
 
 ## Zengetters
 
-| Zengetter | 它能干什么?                              | 返回值类型                                                      | 用法            |
-|:---------:|:---------------------------------------:|:--------------------------------------------------------------:|:---------------:|
-| biomes    |  以列表形式返回所有注册过的生物群系        | [生物群系](/Vanilla/Biomes/IBiome)列表                        | `game.biomes`   |
-| blocks    |  以列表形式返回所有注册过的方块            | [方块定义](/Vanilla/Blocks/IBlockDefinition)列表              | `game.blocks`   |
-| entities  |  以列表形式返回所有注册过的实体            | [实体定义](/Vanilla/Entities/IEntityDefinition)列表           | `game.entities` |
-| items     |  以列表形式返回所有注册过的物品            | [物品定义](/Vanilla/Items/IItemDefinition)列表                | `game.items`    |
-| liquids   |  以列表形式返回所有注册过的流体            | [流体定义](/Vanilla/Liquids/ILiquidDefinition)列表            | `game.liquids`  |
-| potions   |  以列表形式返回所有注册过的药水            | [药水](/Vanilla/Potions/IPotion)列表                          | `game.potions`  |
+| Zengetter | What does it do?                        | Return Type                                                    | Usage           |
+|-----------|-----------------------------------------|----------------------------------------------------------------|-----------------|
+| biomes    | Returns all registered biomes as list   | List<[IBiomes](/Vanilla/Biomes/IBiome/)>                        | `game.biomes`   |
+| blocks    | Returns all registered blocks as list   | List<[IBlockDefinition](/Vanilla/Blocks/IBlockDefinition/)>     | `game.blocks`   |
+| entities  | Returns all registered entities as list | List<[IEntityDefinition](/Vanilla/Entities/IEntityDefinition/)> | `game.entities` |
+| items     | Returns all registered items as list    | List<[IItemDefinition](/Vanilla/Items/IItemDefinition/)>        | `game.items`    |
+| liquids   | Returns all registered liquids as list  | List<[ILiquidDefinition](/Vanilla/Liquids/ILiquidDefinition/)>  | `game.liquids`  |
+| potions   | Returns all registered potions as list  | List<[IPotion](/Vanilla/Potions/IPotion/)>                      | `game.potions`  |
 
-## 方法
+## Methods
 
-### 获取实体
+### GetEntity
 ```
-//getEntity(实体名称)
+//getEntity(EntityName)
 
-//两种方法本质上没有区别
+//essentially the same
 val sheep = game.getEntity("sheep");
 val sheep1 = <entity:minecraft:sheep>;
 ```
 
-### 设置本地化
+### SetLocalization
 
-设置本地化。 
-参数均为字符串。
-`game.setLocalization(key, value);`  
+Sets the localization.   
+All parameters are strings.
+`game.setLocalization(key, value);`  
 `game.setLocalization(lang, key, value);`
 
-### 本地化
+### Localize
 
-返回本地化的字符串。
-`game.localize(key)`  
+Returns a localized String  
+`game.localize(key)`  
 `game.localize(key, lang)`

@@ -1,4 +1,4 @@
-# 炼油厂
+# 炼油厂（Refinery）
 炼油厂相关包可以被用于为沉浸工程的炼油厂添加或移除配方。
 
 ## 导入相关包
@@ -8,10 +8,10 @@
 
 |是否必要   |类型                |数据类型                                           |
 |----------|--------------------|----------------------------------------------------|
-|必要      |Output（输出）       |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)|
-|必要      |Input 1（输入1）     |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)|
-|必要      |Input 2（输入2）     |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)|
-|必要      |Energy（能量）       |整数                                                 |
+|必要      |Output（输出）       |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)|
+|必要      |Input 1（输入1）     |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)|
+|必要      |Input 2（输入2）     |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)|
+|必要      |Energy（能量）       |整型                                                 |
 
 ### 例子
 ```JAVA
@@ -26,7 +26,7 @@ mods.immersiveengineering.Refinery.addRecipe(<liquid:iron>, <liquid:water>, <liq
 
 |类型              |数据类型                                             |
 |------------------|----------------------------------------------------|
-|Output（输出）     |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)|
+|Output（输出）     |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)|
 
 ### 例子
 ```JAVA

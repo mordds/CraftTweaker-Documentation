@@ -1,18 +1,17 @@
-# 物品实体
+# IEntityItem
 
-表示掉落于世界中的物品堆。
+Represents an item stack in the world.  
 
-## 导入相关包
-为了避免发生一些不期而遇的问题（比如声明[数组](/AdvancedFunctions/Arrays_and_Loops)），最为安全、也是最为推荐的方式就是导入相关的包。  
+## Importing the package
+It might be required for you to import the package if you encounter any issues (like casting an [Array](/AdvancedFunctions/Arrays_and_Loops/)), so better be safe than sorry and add the import.  
 `import crafttweaker.entity.IEntityItem;`
 
 
-## 继承自[实体](IEntity)
-实体物品继承自[实体](IEntity)。这意味着所有[实体](IEntity)可用的函数，在物品实体上也可用。
+## Extending [IEntity](/Vanilla/Entities/IEntity/)
+IEntityItem extends [IEntity](/Vanilla/Entities/IEntity/). That means all functions available to [IEntities](/Vanilla/Entities/IEntity/) also are available to IEntityItem.
 
 ## ZenGetters
 
-| ZenGetter |                返回类型                 |
-| :-------: | :-------------------------------------: |
-|   item    | [IItemStack](/Vanilla/Items/IItemStack) |
-
+| ZenGetter | Return Type                             |
+|-----------|-----------------------------------------|
+| item      | [IItemStack](/Vanilla/Items/IItemStack/) |

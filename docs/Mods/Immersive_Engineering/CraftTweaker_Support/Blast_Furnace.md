@@ -1,4 +1,4 @@
-# 高炉
+# 高炉（Blast Furnace）
 高炉相关包可以被用于为沉浸工程的高炉添加或移除配方。
 
 
@@ -9,10 +9,10 @@
 ## 添加配方:
 |是否必要   |类型           |数据类型                                			 |
 |----------|---------------|----------------------------------------------------|
-|必要      |Output（输出）  |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)  			 |
-|必要      |Input（输入）   |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient)  |
-|必要      |Time（时间）    |整数 											 |
-|可选      |Slag（炉渣）    |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)  			 |
+|必要      |Output（输出）  |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)  			 |
+|必要      |Input（输入）   |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/)  |
+|必要      |Time（时间）    |整型 											 |
+|可选      |Slag（炉渣）    |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)  			 |
 
 
 ### 例子
@@ -26,7 +26,7 @@ mods.immersiveengineering.BlastFurnace.addRecipe(<minecraft:diamond>, <ore:logWo
 ## 移除配方
 |类型              |数据类型                                          |
 |------------------|---------------------------------------------------|
-|输出              |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)            |
+|输出              |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)            |
 
 ### 例子:
 ```JAVA
@@ -40,7 +40,7 @@ mods.immersiveengineering.BlastFurnace.removeRecipe(<minecraft:diamond>;
 ## 添加燃料
 |是否必要   |类型         |数据类型                                			|
 |----------|------------|---------------------------------------------------|
-|必要      |Input（输入）|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient) |
+|必要      |Input（输入）|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/) |
 |必要      |Time （时间）|整数 											|
 
 ### 例子
@@ -54,7 +54,7 @@ mods.immersiveengineering.BlastFurnace.addFuel(<ore:plankWood>, 2000);
 ## 移除燃料
 |是否必要   |类型           |数据类型                                			 |
 |----------|---------------|------------------------------------------------|
-|必要      |Output（输出）  |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)|
+|必要      |Output（输出）  |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)|
 
 ### 例子
 ```JAVA

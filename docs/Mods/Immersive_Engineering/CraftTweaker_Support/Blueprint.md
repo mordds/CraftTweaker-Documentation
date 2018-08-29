@@ -1,11 +1,11 @@
-# 蓝图
+# 蓝图（Blueprint）
 蓝图相关包可以被用于为沉浸工程的蓝图添加或移除配方。
 
 ## PSA
-[类别](/Mods/Immersive_Engineering/Variables/Categories.md)字符串比较特殊。
-如果这个字符串的内容是一个不存在的类别，将会创建一个新的类别和一个蓝图。
-也就是说你可以添加一个叫做“香蕉煎饼”的蓝图，并将类别叫做“烹饪配方”。
-类别创建之后它会将余下的所有这个类别的配方归到这个类别。
+[类别](/Mods/Immersive_Engineering/Variables/Categories/)字符串比较特殊。
+如果这个字符串的内容是一个不存在的类别，将会创建一个新的类别因而会产生一个新的蓝图。
+也就是说你可以添加一个包含了所有“烹饪配方”的类别，并把它命名为“香蕉煎饼”的类别。
+类别创建之后添加的属于这个类别的配方都会归到这个类别。
 
 
 ## 导入相关包
@@ -14,9 +14,9 @@
 ## 添加配方
 |是否必要  |类型              |数据类型                                								|
 |----------|----------------|-------------------------------------------------------------------------|
-|必要      |Category（类别） |字符串[Category（类别）](/Mods/Immersive_Engineering/Variables/Categories.md)	|
-|必要      |Output（输出）   |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)									|
-|必要      |Inputs（输入）   |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient)  						|
+|必要      |Category（类别） |字符串[Category（类别）](/Mods/Immersive_Engineering/Variables/Categories/)	|
+|必要      |Output（输出）   |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)									|
+|必要      |Inputs（输入）   |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/)  						|
 
 
 ### 例子
@@ -35,7 +35,7 @@ mods.immersiveengineering.Blueprint.addRecipe("Banana Pancakes", <minecraft:diam
 ## 移除配方
 |类型              |数据类型                                          |
 |------------------|---------------------------------------------------|
-|Output（输出）     |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)   |
+|Output（输出）     |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)  |
 
 ### 例子:
 ```JAVA

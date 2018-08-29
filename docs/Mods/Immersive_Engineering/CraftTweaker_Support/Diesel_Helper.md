@@ -1,4 +1,4 @@
-# 柴油助手
+# 柴油助手（Diesel Helper）
 柴油助手相关包可以被用于改变沉浸工程的燃料。
 
 ## 导入相关包
@@ -8,8 +8,8 @@
 
 |是否必要  |类型                  |数据类型                                          										|
 |----------|---------------------|------------------------------------------------------------------------------------------|
-|必要      |Output               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)   											|
-|必要      |Input                |Integer      																				|
+|必要      |Output               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)   											|
+|必要      |Input                |整型      																				|
 
 ### 例子
 ```JAVA
@@ -24,7 +24,7 @@ mods.immersiveengineering.DieselHandler.addFuel(<liquid:water>, 2000);
 
 |是否必要  |类型                  |数据类型                                         										|
 |----------|---------------------|------------------------------------------------------------------------------------------|
-|必要     |Output               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)  												|
+|必要     |Output               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)  												|
 
 ### 例子
 ```JAVA
@@ -40,7 +40,7 @@ mods.immersiveengineering.DieselHandler.removeFuel(<liquid:water>);
 
 |是否必要   |类型                 |数据类型                                          										|
 |----------|---------------------|------------------------------------------------------------------------------------------|
-|必要      |Output               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)  												|
+|必要      |Output               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)  												|
 
 ### 例子
 ```JAVA
@@ -55,7 +55,7 @@ mods.immersiveengineering.DieselHandler.addDrillFuel(<liquid:water>);
 
 |是否必要  |类型                 |数据类型                                          										|
 |----------|---------------------|------------------------------------------------------------------------------------------|
-|必要      |Output               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)  												|
+|必要      |Output               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)  												|
 
 ### 例子
 ```JAVA

@@ -1,6 +1,6 @@
 # 关联数组
 
-关联数组（有的地方也叫映射或者字典）和普通的[数组](Arrays_and_Loops)极为相似，也能够存储多条数据。但和[数组](Arrays_and_Loops)不同之处在于，数组的下标（一般叫做 key，翻译过来常叫做“键”）可以随意定义！
+关联数组（有的地方也叫映射或者字典）和普通的[数组](Arrays_and_Loops/)极为相似，也能够存储多条数据。但和[数组](Arrays_and_Loops/)不同之处在于，数组的下标（一般叫做 key，翻译过来常叫做“键”）可以随意定义！
 
 ## 声明一个关联数组
 
@@ -33,7 +33,7 @@ val myAssocArray = {
 
 ## 在关联数组中访问元素。
 
-你可以像访问[数组](Arrays_and_Loops)那样访问一个关联数组中的元素：  
+你可以像访问[数组](Arrays_and_Loops/)那样访问一个关联数组中的元素：  
 `Array[index]`  
 唯一不同之处在于，不再通过整型数下标来访问数组，而是通过你之前预先申明的 key 来访问！  
 ```js
@@ -114,8 +114,8 @@ myAssocArray.entrySet //entrySet
 
 让我们来声明一个关联数组，并存储合成表，而后进行迭代：  
 
-- Keys 作为合成的输出结果，以 [IItemStack（物品堆）](/Vanilla/Items/IItemStack) 类型存储
-- Values 作为合成的输入材料，以 [IIngredient（材料）](/Vanilla/Variable_Types/IIngredient) 类型存储
+- Keys 作为合成的输出结果，以 [IItemStack（物品堆）](/Vanilla/Items/IItemStack/) 类型存储
+- Values 作为合成的输入材料，以 [IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/) 类型存储
 - 我们通过 key 遍历法来遍历数组，像这样：`for key in assocArray {doSth;}`
 - 我们还要通过 key-value 遍历法来遍历数组，像这样：`for key, value in assocArray {doSth;}`
 
