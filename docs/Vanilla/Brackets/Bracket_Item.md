@@ -1,49 +1,49 @@
-# 物品处理器
+# Item Bracket Handler
 
-物品处理器允许你访问游戏中的物品。它只能用于得到注册过的物品，所以如果你有访问模组中的物品，增加或者移除此模组时可能会出错。
+The Item Bracket Handler gives you access to the Items in the game. It is only possible to get items registered in the game, so adding or removing mods may cause issues if you reference the mod's items in an ITem Bracket Handler.
 
-物品可以用以下方式引用它们：
+Items are referenced in the Item Bracket Handler by like so:
 
 ```
 <modid:itemname>
 ```
 
-`modid`指的是物品所属的模组名称，`itemname`指物品名称。推荐使用`/ct hand`获取正确的物品名称。
+With the `modid` being the modid of the mod that the Item belongs to, and `itemname` being the name of the item, It is recommended to use `/ct hand` to get the correct name of the item.
 
-通常也用以下方式引用：
+Generally it is like this though:
 ```
 <item:modid:itemname:meta>
 ```
-`item `作为首项，作用是告诉 CraftTweaker 它是一个物品。
-就像以上所写的，它是可选的。
-基本上你不会用到它，除非你需要处理几个自定义尖括号处理器。
-`modid ` 是物品所属模组的名称。 
-`itemname` 是物品的名称，使用 /ct hand 获取正确的名称。
-`meta ` 是物品的附加值（例：损耗的耐久、种类等等）。类型为整数。
-你也可以使用通配符`*`以表示所有附加值。 
-它也是可选的：不填写则为0。
+With `item` as first entry, it specifically says "This has to be an item!" to CT.  
+As you've seen above: Optional.  
+Usually you will never need this, unless dealing with several custom bracket handlers.  
+`modid` is the modid of the mod that the Item belongs to.  
+`itemname` is the name of the item, use /ct hand to get the correct name.  
+`meta` is the meta value of the item (e.g. Damage value, types, etc.). This is an Integer.  
+You can also use a wildcard `*` to address all meta values.  
+Also optional: If left out it will be 0.
 
-一般的，它会返回 IItemStack 对象。
-更对信息请参考[所属的wiki页面](/Vanilla/Items/IItemStack)。
+Normally, this will return an IItemStack Object.  
+Please refer to [the respective wiki entry](/Vanilla/Items/IItemStack/) for further information.
 
-## 例子
+## Examples
 
-一个物品处理器的例子可以是：
+An example of the Item Bracket Handler would be:
 
 ```
-//苹果
+//apple
 <minecraft:apple>
 
-//煤炭
+//coal
 <minecraft:coal>
 <minecraft:coal:0>
 
-//木炭
+//charcoal
 <minecraft:coal:1>
 
-//都有，即煤炭和木炭
+//both, coal and charcoal
 <minecraft:coal:*>
 <item:minecraft:coal:*>
 ```
 
-这将允许你访问`苹果`物品。
+This will give you access to the `Apple` item.

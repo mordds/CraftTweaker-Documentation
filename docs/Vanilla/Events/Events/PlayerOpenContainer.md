@@ -1,28 +1,28 @@
-# 玩家打开容器（PlayerOpenContainer）
+# PlayerOpenContainer
 
-玩家打开容器事件在玩家打开容器时触发。
+The PlayerOpenContainer Event is fired whenever a player opens a container.
 
-## 事件类
-你需要在函数头进行一次事件的类型转换，转换成如下的事件类：
+## Event Class
+You will need to cast the event in the function header as this class:  
 `crafttweaker.event.PlayerOpenContainerEvent`  
-当然，你可以采用更为简洁的 [导入](/AdvancedFunctions/Import) 方法，在文件开头导入相关语句，而后直接通过名称进行调用。
+You can, of course, also [import](/AdvancedFunctions/Import/) the class before and use that name then.
 
-## 事件接口拓展
-玩家打开容器事件实现了如下接口，能够使用如下所有的 methods，getters 和 setters：
+## Event interface extensions
+PlayerOpenContainer Events implement the following interfaces and are able to call all of their methods/getters/setters as well:
 
-- [IEventCancelable](IEventCancelable)
-- [IPlayerEvent](IPlayerEvent)
+- [IEventCancelable](/Vanilla/Events/Events/IEventCancelable/)
+- [IPlayerEvent](/Vanilla/Events/Events/IPlayerEvent/)
 
 
 ## ZenGetters
-从事件中可以获取如下信息：
+The following information can be retrieved from the event:
 
 | ZenGetter   | Return Type                                 |
 |-------------|---------------------------------------------|
 | `canceled`  | boolean                                     |
-| `player`    | [IPlayer](/Vanilla/Players/IPlayer)         |
-| `container` | [IContainer](/Vanilla/Container/IContainer) |
+| `player`    | [IPlayer](/Vanilla/Players/IPlayer/)         |
+| `container` | [IContainer](/Vanilla/Container/IContainer/) |
 
 ## ZenMethods
 
-- `event.cancel()` 设置事件为可取消的。
+- `event.cancel()` sets the event as cancelled.

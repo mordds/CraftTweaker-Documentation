@@ -1,8 +1,8 @@
-# 附魔处理器
+# Enchantment Bracket Handler
 
-附魔处理器允许你访问游戏中的附魔定义。
+The Enchantment Bracket Handler gives you access to the Enchantment definitions in the game. 
 
-可以用以下方式引用它们：
+They are referenced in the Enchantment handler this way:
 
 ```
 <enchantment:modid:name>
@@ -10,5 +10,5 @@
 <enchantment:minecraft:protection>
 ```
 
-如果附魔被找到，将返回附魔定义对象。
-更多使用附魔定义的信息可以参考[附魔定义](/Vanilla/Enchantments/IEnchantmentDefinition)。
+If the Enchantment is found, this will return an IEnchantmentDefinition Object.
+Please refer to the [respective Wiki entry](/Vanilla/Enchantments/IEnchantmentDefinition/) for further information on what you can do with these.

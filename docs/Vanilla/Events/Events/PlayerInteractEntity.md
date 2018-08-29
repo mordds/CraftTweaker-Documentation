@@ -1,29 +1,29 @@
-# 玩家与实体交互（PlayerInteractEntity）
+# PlayerInteractEntity
 
-玩家与实体交互事件在玩家与实体交互时触发。
+The PlayerInteractEntity Event is fired whenever a player interacts with an Entity.
 
-## 事件类
-你需要在函数头进行一次事件的类型转换，转换成如下的事件类：
+## Event Class
+You will need to cast the event in the function header as this class:  
 `crafttweaker.event.PlayerInteractEntityEvent`  
-当然，你可以采用更为简洁的 [导入](/AdvancedFunctions/Import) 方法，在文件开头导入相关语句，而后直接通过名称进行调用。
+You can, of course, also [import](/AdvancedFunctions/Import/) the class before and use that name then.
 
-## 事件接口拓展
-玩家与实体交互事件实现了如下接口，能够使用如下所有的 methods，getters 和 setters：
+## Event interface extensions
+PlayerInteractEntity Events implement the following interfaces and are able to call all of their methods/getters/setters as well:
 
-- [IEventCancelable](IEventCancelable)
-- [PlayerInteract](PlayerInteract)
-- [IPlayerEvent](IPlayerEvent)
+- [IEventCancelable](/Vanilla/Events/Events/IEventCancelable/)
+- [PlayerInteract](/Vanilla/Events/Events/PlayerInteract/)
+- [IPlayerEvent](/Vanilla/Events/Events/IPlayerEvent/)
 
 
 ## ZenGetters
-从事件中可以获取如下信息：
+The following information can be retrieved from the event:
 
-| ZenGetterZenGetter |             Return Type              |
-| :----------------: | :----------------------------------: |
-|     `canceled`     |               boolean                |
-|      `player`      | [IPlayer](/Vanilla/Players/IPlayer)  |
-|      `entity`      | [IEntity](/Vanilla/Entities/IEntity) |
+| ZenGetter  | Return Type                          |
+|------------|--------------------------------------|
+| `canceled` | boolean                              |
+| `player`   | [IPlayer](/Vanilla/Players/IPlayer/)  |
+| `entity`   | [IEntity](/Vanilla/Entities/IEntity/) |
 
 ## ZenMethods
 
-- `event.cancel()` 设置事件为可取消的。
+- `event.cancel()` sets the event as cancelled.
