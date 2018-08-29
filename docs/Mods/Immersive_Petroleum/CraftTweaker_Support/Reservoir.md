@@ -1,11 +1,11 @@
-# 油藏
+# 油藏（Reservoir）
 
 ## 注册油藏
 
 |类型                      |数据类型                                  |
 |-------------------------|-------------------------------------------|
 |Name Identifier（名称）   |字符串                                     |
-|Fluid（流体）            |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)|
+|Fluid（流体）            |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)|
 |Minimum Size（最大体积）  |整数                                    |
 |Maximum Size（最小体积）  |整数                                    |
 |Replenish Rate（更新速率）|整数                                    |
@@ -20,11 +20,11 @@
 
 对应每一个油藏的加权概率就是:
 ```
-5  in 34
-5  in 34
-6  in 34
-8  in 34
-10 in 34
+34 分之 5
+34 分之 5
+34 分之 6
+34 分之 8
+34 分之 10
 ```
 
 
