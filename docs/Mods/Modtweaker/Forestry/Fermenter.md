@@ -1,4 +1,4 @@
-# 发酵机
+# 发酵机（Fermenter）
 
 ModTweaker 允许你添加或移除林业发酵机配方
 
