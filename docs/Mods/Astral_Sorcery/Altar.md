@@ -18,7 +18,7 @@
 
 ## 移除祭坛合成
 
-这个方法移除第一个在传入的祭坛等级下`输出`为传入的[物品堆](/Vanilla/Items/IItemStack)的合成。 
+这个方法移除第一个在传入的祭坛等级下`输出`为传入的[物品堆](/Vanilla/Items/IItemStack/)的合成。 
 如果有多个合成表可以合成传入的物品，你需要多次使用这个方法。
 
 ```JAVA
@@ -32,13 +32,13 @@ mods.astralsorcery.Altar.removeAltarRecipe(<astralsorcery:blockblackmarble>, 0);
 ## 添加祭坛合成
 
 所有添加合成表的的方法都需要以下参数：
-[-[IItemStack](/Vanilla/Items/IItemStack) `output（输出）`,  
+[-[IItemStack](/Vanilla/Items/IItemStack/) `output（输出）`,  
 -int `starlightRequired（需要的星光）`,  
 -int `craftingTickTime（合成需要的刻数）`,  
--[IIngredient](/Vanilla/Variable_Types/IIngredient)[] `inputs（输入）`
+-[IIngredient](/Vanilla/Variable_Types/IIngredient/)[] `inputs（输入）`
 
 不像工作台合成配方，`输入`参数是一维数组。
-你可以使用[物品堆](/Vanilla/Items/IItemStack), [流体堆](/Vanilla/Liquids/ILiquidStack), [矿物词典条目](/Vanilla/OreDict/IOreDictEntry) 或者 `null` 作为数组的条目。
+你可以使用[物品堆](/Vanilla/Items/IItemStack/), [流体堆](/Vanilla/Liquids/ILiquidStack/), [矿物词典条目](/Vanilla/OreDict/IOreDictEntry/) 或者 `null` 作为数组的条目。
 
 这些合成都不是无序合成！
 
