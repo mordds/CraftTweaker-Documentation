@@ -1,4 +1,4 @@
-# 燃料注册
+# 燃料注册（FuelRegistration）
 
 ## 汽艇
 
@@ -6,7 +6,7 @@
 
 |类型              |数据类型                                        |
 |------------------|--------------------------------------------------|
-|输入              |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)    |
+|输入              |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)    |
 |消耗速度mB/t      |整数                                          |
 
 
@@ -24,9 +24,9 @@ mods.immersivepetroleum.Motorboat.registerMotorboatFuel(<liquid:water>, 5);
 
 |类型               |数据类型                                        |
 |-------------------|-------------------------------------------------|
-|输入               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)      |
-|能量产出Flux/t     |整数                                          |
-|消耗速度mB/t       |整数                                          |
+|输入               |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)      |
+|能量产出Flux/t     |整型                                          |
+|消耗速度mB/t       |整型                                          |
 
 
 #### 代码示例:
