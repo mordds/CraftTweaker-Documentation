@@ -7,9 +7,9 @@
 |是否必要   |类型      	|数据类型                                			 |
 |----------|------------|----------------------------------------------------|
 |必要      |Output（输出）  	|[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)  			 |
-|必要      |Fuel Output（燃料） |整数  										 |
+|必要      |Fuel Output（燃料） |整型  									 |
 |必要      |Input（输入）    	|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/)  |
-|必要      |Time（时间）    	|整数  			 							 	 |
+|必要      |Time（时间）    	|整型  			 							 	 |
 
 ### 例子
 ```JAVA
