@@ -1,4 +1,4 @@
-# 木工机
+# 木工机（Carpenter）
 
 ModTweaker 允许你添加或移除林业木工机配方
 
