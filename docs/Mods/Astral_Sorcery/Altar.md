@@ -32,13 +32,13 @@ mods.astralsorcery.Altar.removeAltarRecipe(<astralsorcery:blockblackmarble>, 0);
 ## 添加祭坛配方
 
 所有添加配方的的方法都需要以下参数：
-[-[IItemStack](/Vanilla/Items/IItemStack/) `output（输出）`,  
+-[IItemStack（物品堆）](/Vanilla/Items/IItemStack/) `output（输出）`,  
 -int `starlightRequired（需要的星光）`,  
 -int `craftingTickTime（合成需要的刻数）`,  
--[IIngredient](/Vanilla/Variable_Types/IIngredient/)[] `inputs（输入）`
+-[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/)[] `inputs（输入）`
 
 不像工作台配方，`输入`参数是一维数组。
-你可以使用[物品堆](/Vanilla/Items/IItemStack/), [流体堆](/Vanilla/Liquids/ILiquidStack/), [矿物词典条目](/Vanilla/OreDict/IOreDictEntry/) 或者 `null` 作为数组的条目。
+你可以使用[IItemStack（物品堆）](/Vanilla/Items/IItemStack/), [ILiquidStack（流体堆）](/Vanilla/Liquids/ILiquidStack/), [IOreDictEntry（矿物词典条目）](/Vanilla/OreDict/IOreDictEntry/) 或者 `null` 作为数组的条目。
 
 这些配方都不是无序配方！
 
