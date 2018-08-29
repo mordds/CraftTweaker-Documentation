@@ -1,4 +1,4 @@
-# 机器人装配线系统（Robotic Assembly System)
+# 机器人装配线系统（Robotic Assembly System）
 
 机器人装配线系统是一个多方块结构，它由装配控制器、装配输入输出设备、装配平台、装配激光和装配装配钻头组成。它使用激光和/或钻头将输入物品变为输出物品。
 
@@ -10,7 +10,7 @@
 
 ## 移除
 
-以下函数会移除第一个 `output（输出）` 为指定[物品堆（IItemStack）](/Vanilla/Items/IItemStack)的配方：
+以下函数会移除第一个 `output（输出）` 为指定[物品堆（IItemStack）](/Vanilla/Items/IItemStack/)的配方：
 
 ```java
 mods.pneumaticcraft.assembly.removeLaserRecipe(IItemStack output);
