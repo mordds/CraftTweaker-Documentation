@@ -28,7 +28,7 @@ mods.jei.JEI.removeAndHide(<ore:planks>, false);
 ```
 
 ## 添加物品
-你还可以往 JEI 中物品（[IItemStack](/Vanilla/Items/IItemStack)），但仅限于添加 JEI 物品栏中未添加的物品或添加一个带有 NBT标签的物品
+你还可以往 JEI 中物品（[IItemStack](/Vanilla/Items/IItemStack/)），但仅限于添加 JEI 物品栏中未添加的物品或添加一个带有 NBT标签的物品
 ```JAVA
 //addItem(item);
 //item 物品
@@ -37,7 +37,7 @@ mods.jei.JEI.addItem(<minecraft:stone>.withTag({display:{Name: "Pickle",Lore:["W
 
 ## 添加信息
 JEI 信息是一个在打开材料的配方或用途页面时额外显示的页面，它包含关于这个材料的信息。 
-你可以为物品堆（[IItemStack](/Vanilla/Items/IItemStack)、物品堆数组（[IItemStack](/Vanilla/Items/IItemStack)[]））、流体堆（[ILiquidStack](/Vanilla/Liquids/ILiquidStack)）或者矿物词典条目（[IOreDictEntry](/Vanilla/OreDict/IOreDictEntry)）添加 JEI 信息页面
+你可以为物品堆（[IItemStack](/Vanilla/Items/IItemStack/)、物品堆数组（[IItemStack](/Vanilla/Items/IItemStack/)[]））、流体堆（[ILiquidStack](/Vanilla/Liquids/ILiquidStack/)）或者矿物词典条目（[IOreDictEntry](/Vanilla/OreDict/IOreDictEntry/)）添加 JEI 信息页面
 
 如果字符串长到不能在一行（或一个页面显示），它会自动创建一行（一个页面）.
 每一条字符串参数都至少占有一行，如果太长则会自动换行。
