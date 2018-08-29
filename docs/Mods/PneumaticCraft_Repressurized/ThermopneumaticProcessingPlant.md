@@ -10,7 +10,7 @@
 
 ## 移除
 
-以下函数会移除第一个 `output (输出)` 为指定[材料（IIngredient）](/Vanilla/Variable_Types/IIngredient)的配方：
+以下函数会移除第一个 `output (输出)` 为指定[材料（IIngredient）](/Vanilla/Variable_Types/IIngredient/)的配方：
 
 ```
 mods.pneumaticcraft.thermopneumaticprocessingplant.removeRecipe(IIngredient output);
