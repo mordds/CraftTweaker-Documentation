@@ -1,4 +1,4 @@
-# 粉碎机
+# 粉碎机（Crusher）
 粉碎机相关包可以被用于为沉浸工程的添加添加或移除配方。
 
 ## 导入相关包
@@ -8,10 +8,10 @@
 
 |是否必要   |类型                  |数据类型                                           										|
 |----------|----------------------|-----------------------------------------------------------------------------------------|
-|必要      |Output（输出）               |[IItemStack（物品堆）](/Vanilla/Items/IItemStack) 													|
-|必要      |Input（输入）                |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient)      									|
+|必要      |Output（输出）               |[IItemStack（物品堆）](/Vanilla/Items/IItemStack/) 													|
+|必要      |Input（输入）                |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/)      									|
 |必要      |Energy（能量）               |整数																					|
-|可选      |Secondary Output（副产物）   |[IItemStack（物品堆）](/Vanilla/Items/IItemStack)													|
+|可选      |Secondary Output（副产物）   |[IItemStack（物品堆）](/Vanilla/Items/IItemStack/)													|
 |可选      |Secondary Chance（副产物概率）|双精度型																					|
 
 ### 例子
@@ -30,7 +30,7 @@ mods.immersiveengineering.Crusher.addRecipe(<minecraft:diamond>, <ore:logWood>, 
 
 |类型               |数据类型                                          |
 |------------------|---------------------------------------------------|
-|Output（输出）     |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)            |
+|Output（输出）     |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)            |
 
 ### 例子
 ```JAVA
@@ -44,7 +44,7 @@ mods.immersiveengineering.Crusher.removeRecipe(<minecraft:diamond>);
 
 |Type              |Data Type                                          |
 |------------------|---------------------------------------------------|
-|Input             |[IItemstack](/Vanilla/Items/IItemStack)            |
+|Input             |[IItemstack](/Vanilla/Items/IItemStack/)            |
 
 ### Example
 ```JAVA
