@@ -1,35 +1,38 @@
-# Heat Frame Cooling
+# 液体燃料 (Liquid Fuel)
 
-Heat Frame Cooling can be used to transform one item into another by placing items in a chest or other inventory with a Heat Frame attached, and cooling it to below 0°C (commonly using a Vortex Tube).
+液体燃料在气动工艺中的用途包括：在（高级）液体压缩机中产生气压和（可选的）在煤油灯中用作照明。
+默认情况下所有在精炼厂生产的液体和任意温度高于 305K 的流体都被认为是液体燃料。
 
-## Calling
+## 导入
 
-You can call the Heat Frame Cooling package using `mods.pneumaticcraft.heatframecooling`
+使用 `mods.pneumaticcraft.liquidfuel` 以导入液体燃料相关包。
 
-## Removing
+## 移除
 
-This function removes the first recipe it finds with the given [IIngredient](/Vanilla/Variable_Types/IIngredient/) `output`:
-
-```
-mods.pneumaticcraft.heatframecooling.removeRecipe(IIngredient output);
-// Example
-mods.pneumaticcraft.heatframecooling.removeRecipe(<minecraft:obsidian>);
-```
-
-This function removes *all* Heat Frame Cooling recipes:
+以下函数会使 `fluid`（数据类型为[流体堆（ILiquidStack）](/Vanilla/Liquids/ILiquidStack/)）无法作为液体燃料：
 
 ```
-mods.pneumaticcraft.heatframecooling.removeAllRecipes();
+mods.pneumaticcraft.liquidfuel.removeFuel(ILiquidStack fluid);
+//fluid 流体
+
+// 实例
+mods.pneumaticcraft.liquidfuel.removeFuel(<liquid:lpg>);
 ```
 
-## Adding
-
-These functions are used to add new recipes for the Heat Frame Cooling system:
+以下函数会移除*所有*注册的燃料：
 
 ```
-mods.pneumaticcraft.heatframecooling.addRecipe(IItemStack input, IItemStack output);
-mods.pneumaticcraft.heatframecooling.addRecipe(IOreDictEntry input, IItemStack output);
+mods.pneumaticcraft.liquidfuel.removeAllFuels();
+```
 
-// Example
-mods.pneumaticcraft.heatframecooling.addRecipe(<minecraft:slime_ball>, <minecraft:snow_ball>);
+## 添加
+
+以下函数可以使流体注册为液体燃料：
+
+```java
+// 将指定的流体注册为液体燃料。 mlPerBucket 指每一桶燃料可以产生压缩空气的体积。例如在空气压缩机中，一个煤可以产生 16000mL 的压缩空气。
+mods.pneumaticcraft.liquidfuel.addFuel(ILiquidStack fluid, double mlPerBucket);
+
+// 实例：将水注册为每桶可以产生 16000mL 的压缩空气的液体燃料。
+mods.pneumaticcraft.liquidfuel.addFuel(<liquid:water>, 16000);
 ```

@@ -1,4 +1,4 @@
-# 离心机
+# 离心机（Centrifuge）
 
 ModTweaker 允许你添加或移除林业离心机配方
 
