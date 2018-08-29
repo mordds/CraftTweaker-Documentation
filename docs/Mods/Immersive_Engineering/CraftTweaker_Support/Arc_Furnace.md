@@ -11,9 +11,9 @@
 |必要    |Output（输出）                    |[IItemStack（物品堆）](/Vanilla/Items/IItemStack/) 													|
 |必要    |Input（输入）                     |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/)      									|
 |必要    |Slag（炉渣）                      |[IItemStack（物品堆）](/Vanilla/Items/IItemStack/)													|
-|必要    |Time（时间）                      |整数																					|
-|必要    |Energy Per Tick（每刻消耗的能量）  |整数																					|
-|可选    |Additives（添加物）               |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/) 数组[]								|
+|必要    |Time（时间）                      |整型																					|
+|必要    |Energy Per Tick（每刻消耗的能量）  |整型																					|
+|可选    |Additives（添加物）               |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/) 数组								|
 |可选    |Special Recipe Type（特殊合成种类）|字符串[specialRecipeTypes（特殊合成类型）](/Mods/Immersive_Engineering/Variables/SpecialRecipeTypes.md/)  |
 
 
@@ -32,7 +32,7 @@ mods.immersiveengineering.ArcFurnace.addRecipe(<minecraft:diamond>, <ore:logWood
 
 ## 移除配方
 
-|类型              |Data Type                                          |
+|类型              |数据类型                                          |
 |------------------|---------------------------------------------------|
 |输出              |[IItemstack（物品堆）](/Vanilla/Items/IItemStack/)   |
 
