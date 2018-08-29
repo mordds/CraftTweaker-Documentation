@@ -1,4 +1,4 @@
-# 热电子加工台
+# 热电子加工台（ThermionicFabricator）
 
 ModTweaker 允许你添加或移除林业热电子加工台配方
 
