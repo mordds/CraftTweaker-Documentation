@@ -1,13 +1,13 @@
 # 星辉聚合
 
-你可以添加或移除星辉聚合合成表
+你可以添加或移除星辉聚合配方
 
 
 ## 导入
 使用`mods.astralsorcery.LightTransmutation`以导入星辉聚合包。 
 
 ## 移除
-这个方法移除第一个`output`（输出）为传入的[物品堆](/Vanilla/Items/IItemStack)的合成并且使用`matchStack`（物品堆匹配）以判定是否需要匹配物品附加值。
+这个方法移除第一个`output`（输出）为传入的[物品堆](/Vanilla/Items/IItemStack/)的合成并且使用`matchStack`（物品堆匹配）以判定是否需要匹配物品附加值。
 如果有多个合成表可以合成传入的物品，你需要多次使用这个方法！
 
 ```JAVA
