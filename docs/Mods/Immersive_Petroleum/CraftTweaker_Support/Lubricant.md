@@ -1,10 +1,10 @@
-# 润滑油注册
+# 润滑油注册（Lubricant Registration）
 
 ## 注册润滑油
 
 |类型                   |数据类型                                      |
 |-----------------------|-----------------------------------------------|
-|输入                  |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)    |
+|输入                  |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)    |
 |消耗速度mB/4tick       |整数                                        |
 
 
