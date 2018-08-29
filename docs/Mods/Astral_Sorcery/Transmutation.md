@@ -1,4 +1,4 @@
-# 星辉聚合
+# 星辉聚合（Starlight Transmutation）
 
 你可以添加或移除星辉聚合配方。
 
