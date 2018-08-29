@@ -1,4 +1,4 @@
-# 精馏
+# 精馏（Distillation）
 
 ## 添加配方
 
@@ -6,9 +6,9 @@
 
 |类型              |数据类型                                                    |
 |------------------|-----------------------------------------------------------|
-|流体输出           |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack) 数组[]|
-|物品输出           |[ItemStack（物品堆）](/Vanilla/Items/IItemStack) 数组[]     |
-|输入              |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)        |
+|流体输出           |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/) 数组[]|
+|物品输出           |[ItemStack（物品堆）](/Vanilla/Items/IItemStack/) 数组[]     |
+|输入              |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)        |
 |每刻消耗的能量     |整数                                                        |
 |时间（单位：刻）   |整数                                                        |
 |概率              |单精度型 数组 []                                             |
