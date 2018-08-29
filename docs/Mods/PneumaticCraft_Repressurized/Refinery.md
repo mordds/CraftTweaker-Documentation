@@ -12,14 +12,14 @@
 
 ## 移除
 
-以下函数会移除第一个所有的 `outputs (输出)` 均为指定材料（IIngredient）的配方：
+以下函数会移除第一个所有的 `outputs (输出)` 均为指定[材料（IIngredient）](/Vanilla/Variable_Types/IIngredient/)的配方：
 
 ```java
 mods.pneumaticcraft.refinery.removeRecipe(IIngredient[] outputs);
 //outputs 所有的输出（数组）
 ```
 
-以下函数会移除第一个 `input（输入）` 为指定材料（IIngredient）的配方：
+以下函数会移除第一个 `input（输入）` 为指定[材料（IIngredient）](/Vanilla/Variable_Types/IIngredient/)的配方：
 
 ```java
 mods.pneumaticcraft.refinery.removeRecipes(IIngredient input);
