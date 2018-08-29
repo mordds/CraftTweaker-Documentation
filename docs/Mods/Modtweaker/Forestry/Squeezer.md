@@ -1,4 +1,4 @@
-# 榨汁机
+# 榨汁机（Squeezer）
 
 ModTweaker 允许你添加或移除林业榨汁机配方
 
@@ -28,7 +28,7 @@ mods.forestry.Squeezer.addRecipe(<liquid:lava>, [<minecraft:obsidian>], 120, <mi
 
 | 参数                 | 类型                                                  | 描述                                          |
 |---------------------|-------------------------------------------------------|-----------------------------------------------|
-| fluidOutput         | 流体堆（[ILiquidStack](/Vanilla/Liquids/ILiquidStack)）| 输出                                          |
-| ingredients         | 物品堆（[IItemStack](/Vanilla/Items/IItemStack)）[]    | 输入的物品（数组）                              |
+| fluidOutput         | [ILiquidStack（流体堆）](/Vanilla/Liquids/ILiquidStack/)| 输出                                          |
+| ingredients         | [IItemStack（物品堆）](/Vanilla/Items/IItemStack/)[]    | 输入的物品（数组）                              |
 | timePerItem         | 整型                                                  | Amount of inputFluid on organic item requires |
-| itemOutput          | 加权物品堆（[WeightedItemStack](/Vanilla/Items/WeightedItemStack)）| 副产物和概率                        |
+| itemOutput          | [WeightedItemStack（加权物品堆）](/Vanilla/Items/WeightedItemStack/)| 副产物和概率                        |
