@@ -1,14 +1,14 @@
-# 润滑油注册
+# Lubricant Registration
 
-## 注册润滑油
+## registerLubricant
 
-|类型                   |数据类型                                      |
+|Type                   |Data Type                                      |
 |-----------------------|-----------------------------------------------|
-|输入                  |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)    |
-|消耗速度mB/4tick       |整数                                        |
+|Input                  |[Fluidstack](/Vanilla/Liquids/ILiquidStack/)    |
+|mB/4tick            |Integer                                        |
 
 
-### 代码示例:
+### Code Example:
 ```JAVA
 mods.immersivepetroleum.Lubricant.registerLubricant(ILiquidStack lubricantEntry, int amount);
 mods.immersivepetroleum.Lubricant.registerLubricant(<liquid:lava>, 500);

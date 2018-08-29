@@ -1,16 +1,15 @@
-# 经验球
+# IEntityXp
 
-指的就是掉落在世界上的经验球。
+Represents an XP Orb in the world.  
 
-## 导入相关包
-为了避免发生一些不期而遇的问题（比如声明 [数组](/AdvancedFunctions/Arrays_and_Loops)），最为安全、也是最为推荐的方式就是导入相关的包。  
+## Importing the package
+It might be required for you to import the package if you encounter any issues (like casting an [Array](/AdvancedFunctions/Arrays_and_Loops/)), so better be safe than sorry and add the import.  
 `import crafttweaker.entity.IEntityXp;`
 
-## 继承自[IEntity](IEntity)
-经验球继承自[实体](IEntity)。这意味着所有[实体](IEntity)对象函数均可用在实体经验球对象上。 
+## Extending [IEntity](/Vanilla/Entities/IEntity/)
+IEntityXp extends [IEntity](/Vanilla/Entities/IEntity/). That means all functions available to [IEntities](/Vanilla/Entities/IEntity/) also are available to IEntityXp.
 
 ## ZenGetters
-| ZenGetter | 返回类型 |
-| :-------: | :------: |
-|    xp     |  float   |
-
+| ZenGetter | Return Type |
+|-----------|-------------|
+| xp        | float       |

@@ -1,21 +1,21 @@
-#  流体处理器
+# Liquid Bracket Handler
 
-流体处理器允许你访问游戏中的流体。它只能用于访问注册的流体，所以如果你有访问模组中的流体，增加或者移除此模组时可能会出错。
+The liquid Bracket Handler gives you access to the liquids in the game. It is only possible to get liquids registered in the game, so adding or removing mods may cause issues if you reference the mod's liquids in an liquid Bracket Handler.
 
-可以用以下方式引用流体：
+Liquids are referenced in the Liquid Bracket Handler by like so:
 
 ```
-<liquid:liquidname> 或者 <fluid:liquidname>
+<liquid:liquidname> OR <fluid:liquidname>
 
-<liquid:lava> 或者 <fluid:lava>
+<liquid:lava> OR <fluid:lava>
 ```
 
-如果流体被找到，将返回流体堆对象。
-更多信息请参考[所属的wiki页面](/Vanilla/Liquids/ILiquidStack)。
+If the liquid is found, this will return an ILiquidStack Object.
+Please refer to the [respective Wiki entry](/Vanilla/Liquids/ILiquidStack/) for further information on what you can do with these.
 
-# 获取所有注册的流体
-你可以使用下列命令以在CraftTweak日志中输出所有注册的流体
+# Getting all Registered liquids
 
+You can use the following command to output all registered liquids to the CraftTweaker log
 ```
 /ct liquids
 /crafttweaker liquids

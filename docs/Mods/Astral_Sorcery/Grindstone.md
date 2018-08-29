@@ -1,25 +1,24 @@
-# 砂轮
+# Grindstone
 
-你可以使用Craft tweaker添加或移除星辉魔法砂轮的合成表。
+You can use CrT to add or remove recipes form the AS grindstone.
 
 
-## 导入
-使用`mods.astralsorcery.Grindstone`以导入砂轮相关包。
+## Calling
+You can call the InfusionRecipe package using `mods.astralsorcery.Grindstone`.
 
-## 移除
-这个方法移除第一个`输出`为传入的[物品堆](/Vanilla/Items/IItemStack)的合成。 
-如果有多个合成表可以合成传入的物品，你需要多次使用这个方法！
-
+## Removing
+This will remove the first grinding recipe it finds that creates the provided [IItemStack](/Vanilla/Items/IItemStack/) `output`.  
+If there are multiple recipes that return the provided output, you need to call this method multiple times!
 ```JAVA
 //mods.astralsorcery.Grindstone.removeRecipe(IItemStack output);
-//output：输出物品
 mods.astralsorcery.Grindstone.removeRecipe(<minecraft:redstone>);
 ```
 
-## 添加
+## Addition
 ```JAVA
 //mods.astralsorcery.Grindstone.addRecipe(IItemStack input, IItemStack output);
-//input：输入物品
-//output：输出物品
 mods.astralsorcery.Grindstone.addRecipe(<minecraft:stone>, <minecraft:gravel>);
+
+//mods.astralsorcery.Grindstone.addRecipe(IItemStack input, IItemStack output, float doubleChance);
+mods.astralsorcery.Grindstone.addRecipe(<minecraft:cobblestone>, <minecraft:gravel>, 0.5f);
 ```

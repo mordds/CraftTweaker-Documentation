@@ -1,22 +1,22 @@
-# 实体被闪电击中（EntityStruckByLightning）
+# EntityStruckByLightning
 
-实体被闪电击中事件在实体将要被闪电击中时触发。
+The EntityStruckByLightning event is fired whenever a lightning bolt is about to hit an entity.  
 
-## 事件类
-你需要在函数头进行一次事件的类型转换，转换成如下的事件类：
+## Event Class
+You will need to cast the event in the function header as this class:  
 `crafttweaker.event.EntityStruckByLightningEvent`  
-当然，你可以采用更为简洁的 [导入](/AdvancedFunctions/Import) 方法，在文件开头导入相关语句，而后直接通过名称进行调用。
+You can, of course, also [import](/AdvancedFunctions/Import/) the class before and use that name then.
 
-## 事件接口拓展
-实体被闪电击中事件实现了如下接口，能够使用如下所有的 methods，getters 和 setters：
+## Event interface extensions
+LivingEntityUseItem Events implement the following interfaces and are able to call all of their methods/getters/setters as well:
 
-- [ILivingEvent](ILivingEvent)
-- [IEventCancelable](IEventCancelable)
+- [ILivingEvent](/Vanilla/Events/Events/ILivingEvent/)
+- [IEventCancelable](/Vanilla/Events/Events/IEventCancelable/)
 
 
 ## ZenGetters/ZenSetters
-在事件中可以获取/设置如下信息：
+The following information can be retrieved/set during the event:
 
 | ZenGetter       | Return Type                          |
 |-----------------|--------------------------------------|
-| `lightning`     | [IEntity](/Vanilla/Entities/IEntity) |
+| `lightning`     | [IEntity](/Vanilla/Entities/IEntity/) |

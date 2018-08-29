@@ -1,31 +1,31 @@
-# 灌装机
+# Bottling Machine
 
-## 导入相关包
-使用`mods.immersiveengineering.BottlingMachine`以导入灌装机相关包。
+## Calling The Package
+You can call the BottlingMachine package using `mods.immersiveengineering.BottlingMachine`.
 
-##添加配方
-|是否必要   |类型         |数据类型                                			  |
-|----------|-------------|-------------------------------------------------|
-|必要      |Output（输出）|[IItemstack（物品堆）](/Vanilla/Items/IItemStack)  			  |
-|必要      |Input（输入）|[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient)  |
-|必要      |Fluid（流体）|[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)  		  |
+## Add Recipe
+|Required  |Type     |Data Type                                			  |
+|----------|---------|----------------------------------------------------|
+|Required  |Output   |[IItemstack](/Vanilla/Items/IItemStack/)  			  |
+|Required  |Input    |[IIngredient](/Vanilla/Variable_Types/IIngredient/)  |
+|Required  |Fluid    |[Fluidstack](/Vanilla/Liquids/ILiquidStack/)  		  |
 
-### 例子
+### Example
 ```JAVA
-//例:
+//Example:
 mods.immersiveengineering.BottlingMachine.addRecipe(IItemStack output, IIngredient input, ILiquidStack fluid);
 mods.immersiveengineering.BottlingMachine.addRecipe(<minecraft:diamond>, <ore:logWood>, <liquid:water>);
 ```
 
 
-## 移除配方
-|类型              |数据类型                                          |
+## Remove Recipe
+|Type              |Data Type                                          |
 |------------------|---------------------------------------------------|
-|输出              |[IItemstack（物品堆）](/Vanilla/Items/IItemStack)            |
+|Output            |[IItemstack](/Vanilla/Items/IItemStack/)            |
 
-### 例子
+### Example
 ```JAVA
-//例:
+//Example:
 mods.immersiveengineering.BottlingMachine.removeRecipe(IItemStack output);
 mods.immersiveengineering.BottlingMachine.removeRecipe(<minecraft:diamond>);
 ```

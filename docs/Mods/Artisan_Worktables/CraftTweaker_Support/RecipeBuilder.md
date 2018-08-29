@@ -1,12 +1,12 @@
-# 合成构造器
+# Recipe Builder
 
-## 导入相关包
-使用以下方法导入合成构造器相关包：
+## Calling The Packages
+You can call the RecipeBuilder using:
 ```JAVA
 import mods.artisanworktables.builder.RecipeBuilder;
 ```
 
-### 例子
+### Example
 ```JAVA
 //Bare Minimum Example
 RecipeBuilder.get("carpenter")
@@ -20,4 +20,4 @@ RecipeBuilder.get("carpenter")
   .create();
 ```
 
-更多特性请查看 [用法](/Mods/Artisan_Worktables/CraftTweaker_Support/Usages)
+For more features see [Usages](/Mods/Artisan_Worktables/CraftTweaker_Support/Usages/)

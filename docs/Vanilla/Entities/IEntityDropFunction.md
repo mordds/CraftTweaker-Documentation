@@ -1,14 +1,14 @@
-# 实体掉落物函数
-掉落物函数只有在相关实体死亡的时候才会被调用，你可以借此发挥想象力，用来做些什么：
+# IEntityDropFunction
+An IEntityDropFunction is called whenever the associated entity is killed. Leave it up to your imagination what you can do with this:
 
-## 导入相关包
-为了避免发生一些不期而遇的问题，最为安全、也是最为推荐的方式就是导入相关的包。  
+## Importing the pacakge
+It might be required for you to import the package if you encounter any issues, so better be safe than sorry and add the import.  
 `import crafttweaker.entity.IEntityDropFunction;`
 
-## 参数
-实体掉落物函数拥有如下几个参数：
+## Parameters
+The IEntityDropFunction is a function with the following parameters:
 
-- [IEntity](IEntity) entity → 指定的实体
-- [IDamageSource](/Vanilla/Damage/IDamageSource) dmgSourve → 实体死亡的原因
+- [IEntity](/Vanilla/Entities/IEntity/) entity → The entity that just died.
+- [IDamageSource](/Vanilla/Damage/IDamageSource/) dmgSourve → The source of the entitie's death.
 
-这个函数会返回一个 [IItemStack](/Vanilla/Items/IItemStack)，或者返回 `null`。
+The Function needs to return an [IItemStack](/Vanilla/Items/IItemStack/), or `null`.
