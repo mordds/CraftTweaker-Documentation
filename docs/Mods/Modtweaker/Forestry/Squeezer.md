@@ -30,5 +30,5 @@ mods.forestry.Squeezer.addRecipe(<liquid:lava>, [<minecraft:obsidian>], 120, <mi
 |---------------------|-------------------------------------------------------|-----------------------------------------------|
 | fluidOutput         | [ILiquidStack（流体堆）](/Vanilla/Liquids/ILiquidStack/)| 输出                                          |
 | ingredients         | [IItemStack（物品堆）](/Vanilla/Items/IItemStack/)[]    | 输入的物品（数组）                              |
-| timePerItem         | 整型                                                  | Amount of inputFluid on organic item requires |
+| timePerItem         | 整型                                                  | 催化剂需要的流体数量 |
 | itemOutput          | [WeightedItemStack（加权物品堆）](/Vanilla/Items/WeightedItemStack/)| 副产物和概率                        |
