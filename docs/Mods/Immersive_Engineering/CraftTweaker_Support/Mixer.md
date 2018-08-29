@@ -1,4 +1,4 @@
-# 混合器
+# 混合器（Mixer）
 混合器相关包可以被用于为沉浸工程的混合器添加或移除配方。
 
 ## 导入相关包
@@ -8,10 +8,10 @@
 
 |是否必要   |类型                  |数据类型                                                     |
 |----------|----------------------|-------------------------------------------------------------|
-|必要      |Fluid Output（流体输出）|[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)                  |
-|必要      |Fluid Input （流体输入）|[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)                  |
-|必要      |Item Inputs（物品输入） |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient)数组  |
-|必要      |Energy（能量）          |整数                                                      |
+|必要      |Fluid Output（流体输出）|[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)                  |
+|必要      |Fluid Input （流体输入）|[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)                  |
+|必要      |Item Inputs（物品输入） |[IIngredient（材料）](/Vanilla/Variable_Types/IIngredient/)数组  |
+|必要      |Energy（能量）          |整型                                                      |
 
 ### 例子
 ```JAVA
@@ -27,7 +27,7 @@ mods.immersiveengineering.Mixer.addRecipe(<liquid:lava>, <liquid:water>, [<ore:l
 
 |类型              |数据类型                                         |
 |------------------|---------------------------------------------------|
-|Output（输出）     |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack)|
+|Output（输出）     |[Fluidstack（流体堆）](/Vanilla/Liquids/ILiquidStack/)|
 
 ### 例子
 ```JAVA
