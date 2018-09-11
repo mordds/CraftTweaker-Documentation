@@ -1,54 +1,51 @@
-# ZenAnnotation
+# Zen 注解
 
-A ZenAnnotation can be given to a Class or its Methods to expose it to ZenScript
+Zen 注解可以使 Java 中的内容暴露到 ZenScript 中并被使用。
 
-## Class annotations
+## 类型注解
 
-These annotations can be given to ZenClasses
+这些注解可以用于类型。
 
-| Annotation                                     | Value                                                                                            | Target | Information                                                       |
-|------------------------------------------------|--------------------------------------------------------------------------------------------------|--------|-------------------------------------------------------------------|
-| [`@ZenClass`](/Dev_Area/ZenAnnotations/Annotation_ZenClass/)             | ZenClass Name (e.g. `crafttweaker.item.IItemStack`), can differ from method formal name          | Class  | Name has to be unique                                             |
-| [`@ZenExpansion`](/Dev_Area/ZenAnnotations/Annotation_ZenExpansion/)     | Expanded ZenType name (e.g. `crafttweaker.item.IItemStack`)                                      | Class  | Name has to exist already (you cant extend something nonexistant) |
-| [`@ZenRegister`](/Dev_Area/ZenAnnotations/Annotation_ZenRegister/)       |                                                                                                  | Class  | Used to Automatically register the class or expansion             |
-| [`@IterableList`](/Dev_Area/ZenAnnotations/Annotation_Iterable/)         | ZenClass name of the Iterable Type (e.g. `crafttweaker.mods.IMod`)                               | Class  | Class needs to be assignable to `Iterable<Type>`                  |
-| [`@IterableMap`](/Dev_Area/ZenAnnotations/Annotation_Iterable/)          | ZenClass name of the Iterable key and value Type (e.g. `string`, `crafttweaker.item.IItemStack`) | Class  | Class needs to be assignable to `List<Type>`                      |
-| [`@IterableSimple`](/Dev_Area/ZenAnnotations/Annotation_Iterable/)       | ZenClass name of the Iterable Type (e.g. `crafttweaker.mods.IMod`)                               | Class  | Class needs to be assignable to `Map<KeyType, ValueType>`         |
-| [`@BracketHandler`](/Dev_Area/ZenAnnotations/Annotation_BracketHandler/) | Bracket Handler Priority (e.g. `priority = 19`)                                                  | Class  | Class needs to be assignable to `IBracketHandler`                 |
-| [`@ModOnly`](/Dev_Area/ZenAnnotations/Annotation_ModOnly/)               | Required mod's name (`isModLoaded(annotation.getValue())` needs to eval to true)                 | Class  | Used in combination with [`@ZenRegister`](/Dev_Area/ZenAnnotations/Annotation_ZenRegister/) |
+| 注解                                                                     | 值                                                                   | 应用目标 | 提示                                                                           |
+| ------------------------------------------------------------------------ | -------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------ |
+| [`@ZenClass`](/Dev_Area/ZenAnnotations/Annotation_ZenClass/)             | Zen 类型名称 (如 `crafttweaker.item.IItemStack`)，可以和方法名称不同 | Class    | 名称必须唯一                                                                   |
+| [`@ZenExpansion`](/Dev_Area/ZenAnnotations/Annotation_ZenExpansion/)     | 扩展一个 Zen 类 (如 `crafttweaker.item.IItemStack`)                  | Class    | 类名必须存在（你不能扩展一个不存在的类）                                       |
+| [`@ZenRegister`](/Dev_Area/ZenAnnotations/Annotation_ZenRegister/)       |                                                                      | Class    | 用于自动注册类或扩展类                                                         |
+| [`@IterableList`](/Dev_Area/ZenAnnotations/Annotation_Iterable/)         | 列表类型名称 (如 `crafttweaker.mods.IMod`)                           | Class    | 类型必须实现 `List<Type>`                                                      |
+| [`@IterableMap`](/Dev_Area/ZenAnnotations/Annotation_Iterable/)          | 键-值类型名称 (如 `string`, `crafttweaker.item.IItemStack`)          | Class    | 类型必须实现 `Map<KeyType, ValueType>`                                         |
+| [`@IterableSimple`](/Dev_Area/ZenAnnotations/Annotation_Iterable/)       | 可迭代类型名称 (如 `crafttweaker.mods.IMod`)                         | Class    | 类型必须实现 `Iterable<Type>`                                                  |
+| [`@BracketHandler`](/Dev_Area/ZenAnnotations/Annotation_BracketHandler/) | 尖括号处理器及优先度 (如 `priority = 19`)                            | Class    | 类型必须实现 `IBracketHandler`                                                 |
+| [`@ModOnly`](/Dev_Area/ZenAnnotations/Annotation_ModOnly/)               | 前置模组名称 (`isModLoaded(annotation.getValue())` 需要为 true)      | Class    | 与 [`@ZenRegister`](/Dev_Area/ZenAnnotations/Annotation_ZenRegister/) 组合使用 |
 
+## 参数注解
 
-## Parameter annotations
+这些注解可以用于方法参数。
 
-These annotations can be given to Method Parameters
+| 注解                                                         | 应用目标  | 信息                                 |
+| ------------------------------------------------------------ | --------- | ------------------------------------ |
+| `@NotNull`                                                   | Parameter | 尚未实现                             |
+| [`@Optional`](/Dev_Area/ZenAnnotations/Annotation_Optional/) | Parameter | 将参数表示为可选，调用函数时可以省略 |
 
-| Annotation                         | Target    | Information                                                                                   |
-|------------------------------------|-----------|-----------------------------------------------------------------------------------------------|
-| `@NotNull`                         | Parameter | Does nothing (NYI)                                                                            |
-| [`@Optional`](/Dev_Area/ZenAnnotations/Annotation_Optional/) | Parameter | Denotes a Parameter as optional. Optional parameters can be omitted when calling the function |
+## 方法注解
 
+这些注解可以用于方法。
 
-## Method annotations
+| 注解                                                                       | 值                                    | 应用目标 |
+| -------------------------------------------------------------------------- | ------------------------------------- | -------- |
+| [`@ZenCaster`](/Dev_Area/ZenAnnotations/Annotation_ZenCaster/)             |                                       | Method   |
+| [`@ZenOperator`](/Dev_Area/ZenAnnotations/Annotation_ZenOperator/)         | [Zen 操作符](/Dev_Area/ZenOperators/) | Method   |
+| [`@ZenGetter`](/Dev_Area/ZenAnnotations/ZenMembers/)                       | getter 名称，调用时可省略()           | Method   |
+| [`@ZenSetter`](/Dev_Area/ZenAnnotations/ZenMembers/)                       | setter 名称，调用时可省略()           | Method   |
+| [`@ZenMemberGetter`](/Dev_Area/ZenAnnotations/ZenMembers/)                 |                                       | Method   |
+| [`@ZenMemberSetter`](/Dev_Area/ZenAnnotations/ZenMembers/)                 |                                       | Method   |
+| [`@ZenMethod`](/Dev_Area/ZenAnnotations/Annotation_ZenMethod/)             |                                       | Method   |
+| [`@ZenMethodStatic`](/Dev_Area/ZenAnnotations/Annotation_ZenMethodStatic/) |                                       | Method   |
+| [`@ZenDoc`](/Dev_Area/ZenAnnotations/Annotation_ZenDoc/)                   | `dumpZS` 中的额外信息                 | Method   |
 
-These annotations can be given to Methods (both static and nonstatic)
+## 字段注解
 
-| Annotation                                                                | Value                                                                    | Target |
-|---------------------------------------------------------------------------|--------------------------------------------------------------------------|--------|
-| [`@ZenCaster`](/Dev_Area/ZenAnnotations/Annotation_ZenCaster/)             |                                                                          | Method |
-| [`@ZenOperator`](/Dev_Area/ZenAnnotations/Annotation_ZenOperator/)         | [OperatorType](/Dev_Area/ZenOperators/)                                  | Method |
-| [`@ZenGetter`](/Dev_Area/ZenAnnotations/ZenMembers/)                       | getter name (e.g. "name") if omited, method name without () will be used | Method |
-| [`@ZenSetter`](/Dev_Area/ZenAnnotations/ZenMembers/)                       | setter name (e.g. "name") if omited, method name without () will be used | Method |
-| [`@ZenMemberGetter`](/Dev_Area/ZenAnnotations/ZenMembers/)                 |                                                                          | Method |
-| [`@ZenMemberSetter`](/Dev_Area/ZenAnnotations/ZenMembers/)                 |                                                                          | Method |
-| [`@ZenMethod`](/Dev_Area/ZenAnnotations/Annotation_ZenMethod/)             |                                                                          | Method |
-| [`@ZenMethodStatic`](/Dev_Area/ZenAnnotations/Annotation_ZenMethodStatic/) |                                                                          | Method |
-| [`@ZenDoc`](/Dev_Area/ZenAnnotations/Annotation_ZenDoc/)                   | The Additional Method info for `dumpZS`                                  | Method |
+这些注解可以应用于 public 字段。
 
-
-## Field annotations
-
-These annotations can be given to public fields (both static and nonstatic)
-
-| Annotation                                            | Target | Information                            |
-|-------------------------------------------------------|--------|----------------------------------------|
-| [`@ZenProperty`](/Dev_Area/ZenAnnotations/ZenMembers/) | Field  | Combines `@ZenSetter` and `@ZenGetter` |
+| 注解                                                   | 应用目标 | 信息                                       |
+| ------------------------------------------------------ | -------- | ------------------------------------------ |
+| [`@ZenProperty`](/Dev_Area/ZenAnnotations/ZenMembers/) | Field    | 组合了 `@ZenSetter` 和 `@ZenGetter` 的行为 |
