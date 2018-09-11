@@ -1,13 +1,16 @@
-# ZenDoc
+# Zen 说明文档
 
-The `@ZenDoc` annotation allows developers to provide additional information to the `/ct dumpZS` command.  
-More specifically, it will look like this:
+`@ZenDoc` 注解允许开发者在 `/ct dumpZS` 命令中提供附加信息。
+结果看起来像这样：
 
 ![img](assets/zenDoc.png)
 
-## Example
+_（译者注：那个########中的内容就是附加信息）_
+
+## 例子
 
 [Crafttweaker Test Project ZenDoc](https://github.com/jaredlll08/CraftTweaker/tree/1.12/CraftTweaker2-MC1120-Tests/src/main/java/crafttweaker/tests/wiki/ZenDocWiki.java)
+
 ```
 @ZenClass(value = "crafttweaker.tests.zenDoc")
 @ZenRegister
@@ -20,9 +23,8 @@ public class ZenDocWiki {
 }
 ```
 
+## 可以被应用的方法 || 附加信息
 
-## What methods can be annotated || Additional Info
-
-- You can annotate all methods, static and nonstatic.
-- Currently, this will only affect the generated HTML file when running [`/ct dumpzs`](/Vanilla/Commands/).
-- This annotation takes one String as value that is the additional information that should be printed.
+-   所有静态/非静态方法都可用。
+-   只会影响 [`/ct dumpzs`](/Vanilla/Commands/) 中导出的 HTML 文件。
+-   需要传入一个 String 值作为导出的附加信息。

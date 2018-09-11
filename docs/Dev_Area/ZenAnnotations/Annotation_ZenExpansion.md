@@ -1,9 +1,8 @@
-# ZenExpansion
+# Zen 扩展
 
-A ZenExpansion is, like [`@ZenClass`](/Dev_Area/ZenAnnotations/Annotation_ZenClass/), used to annotate a Class that should be accessible from within ZS.  
-Unlike ZenClasses however, ZenExpansions are used to expand the functionality of already existing ZenClasses.
+ZenExpansion 类似一个 [`@ZenClass`](/Dev_Area/ZenAnnotations/Annotation_ZenClass/)，用来注解一个 ZS 中可用的类型。但它是用来扩展一个已存在的 Zen 类型的。
 
-## Example
+## 例子
 
 ```
 @ZenExpansion("crafttweaker.item.IItemStack")
@@ -16,17 +15,19 @@ public class Expansion {
 }
 ```
 
-This would allow people to do
+这允许了我们调用
+
 ```
 <minecraft:iron_ingot>.print();
 ```
 
-Since this is an expansion the first parameter is the class' instance!  
-This parameter will not be available in ZS.
+第一个参数类型为扩展的目标类型。
 
-## What classes can be annotated || Additional Info
+_译者注：和 C# 或 Kotlin 中的方法扩展类似_
 
-- All Methods need to begin with a parameter that represents the expanded class' instance. Also, all Methods inside the expansion must be static (... and public).
-- You can annotate all Java Classes
-- You must give the annotation a String value (e.g. `crafttweaker.item.IItemStack`). This String value must represent an already existing ZenClass' name.
-- After declaring a class a ZenExpansion, you still need to register it. It is recommended that you use [`@ZenRegister`](/Dev_Area/ZenAnnotations/Annotation_ZenRegister/) for that.
+## 可应用的类型 || 附加信息
+
+-   所有方法的第一个参数类型都应为扩展的目标类型，且都应该是 `public static` 的访问权限。
+-   所有 Java 类型都可用。
+-   注解需要指定一个已经存在的 Zen 类型名称 (如 `crafttweaker.item.IItemStack`)。
+-   在定义一个 ZenExpansion 之后，你仍然需要注册。推荐使用 [`@ZenRegister`](/Dev_Area/ZenAnnotations/Annotation_ZenRegister/)。

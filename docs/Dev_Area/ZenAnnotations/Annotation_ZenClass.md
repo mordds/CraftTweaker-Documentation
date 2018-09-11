@@ -1,10 +1,10 @@
-# ZenClass
+# Zen 类型
 
-A ZenClass is a java class that has been exposed to ZenScript.
+ZenClass 是一种被暴露到 ZenScript 的 Java 类型。
 
-## Example
+## 例子
 
-[Crafttweaker's IItemStack](https://github.com/jaredlll08/CraftTweaker/blob/1.12/CraftTweaker2-API/src/main/java/crafttweaker/api/item/IItemStack.java)
+[Crafttweaker 的 IItemStack](https://github.com/jaredlll08/CraftTweaker/blob/1.12/CraftTweaker2-API/src/main/java/crafttweaker/api/item/IItemStack.java)
 
 ```
 @ZenClass("crafttweaker.item.IItemStack")
@@ -16,8 +16,8 @@ public interface IItemStack extends IIngredient {
 
 The actual implementation does not need to be annotated.
 
-## What classes can be annotated || Additional Info
+## 可以应用的类型 || 附加信息
 
-- You can annotate all Java Classes
-- You should give the annotation a String value (e.g. `crafttweaker.item.IItemStack`). This will be the ZS internal name for the class.
-- After declaring a class a ZenClass, you still need to register it. It is recommended that you use [`@ZenRegister`](/Dev_Area/ZenAnnotations/Annotation_ZenRegister/) for that
+-   所有 Java 类型都可用
+-   需要传入一个 String 值作为 ZenScript 中的名称（如 `crafttweaker.item.IItemStack`）。
+-   定义类型后，你仍然需要注册。推荐使用 [`@ZenRegister`](/Dev_Area/ZenAnnotations/Annotation_ZenRegister/)。
