@@ -1,7 +1,6 @@
 # 烧炼
 
-Crafttweaker允许你`添加`和`移除`烧炼配方，以及改变物品的燃料值。
-
+Crafttweaker 允许你`添加`和`移除`烧炼配方，以及改变物品的燃料值。
 
 ## 配方
 
@@ -19,7 +18,7 @@ furnace.remove(IIngredient output)
 furnace.remove(IIngredient output, IIngredient input);
 ```
 
-第一个方法对移除的配方要求较低，它会移除所有输出为传入的`output`的烧炼配方。 
+第一个方法对移除的配方要求较低，它会移除所有输出为传入的`output`的烧炼配方。
 第二个方法对移除的配方要求更严格，会移除所有输入为传入的`input`且输出为传入的`output`的烧炼配方。
 
 这里还有第三种移除烧炼配方的方法，然而它会移除所有游戏中注册的烧炼配方。
@@ -46,7 +45,6 @@ furnace.addRecipe(IItemStack output, IIngredient input, double xp);
 
 第二个方法会添加一个给予`xp`数量经验的烧炼配方。
 
-
 ## 燃料
 
 ### 设置
@@ -57,7 +55,7 @@ furnace.addRecipe(IItemStack output, IIngredient input, double xp);
 furnace.setFuel(IIngredient input, int burnTime);
 ```
 
-This will set the burn value of `input` to `burnTime` in ticks. Minecraft coal burns for 1600 ticks, 80 seconds, 8 items. 1 item in a minecraft furnace takes 200 ticks to complete.
+将会设置 `input` 的 `burnTime`（单位为 Tick），Minecraft 中的煤炭燃烧 1600 tick，即 80 秒或 8 个物品。一个物品需要烧炼 200 tick 来完成。
 
 将`burntime`设置为`0`会使`input`不能作为燃料。
 
@@ -95,7 +93,7 @@ furnace.remove(<minecraft:quartz>, <minecraft:quartz_ore>);
 furnace.addRecipe(<minecraft:golden_apple>, <minecraft:apple>);
 ```
 
-这会添加当`<minecraft:melon>`被熔炼后输出`<minecraft:speckled_melon>`且给予1500点经验的烧炼配方。
+这会添加当`<minecraft:melon>`被熔炼后输出`<minecraft:speckled_melon>`且给予 1500 点经验的烧炼配方。
 
 ```java
 furnace.addRecipe(<minecraft:speckled_melon>, <minecraft:melon>, 1500);
@@ -109,11 +107,12 @@ furnace.addRecipe(<minecraft:speckled_melon>, <minecraft:melon>, 1500);
 furnace.setFuel(<minecraft:rotten_flesh>, 100);
 ```
 
-
-
 ## 其他功能
+
 ### 获取所有注册的烧炼配方
+
 ```
 furnace.all;
 ```
-Returns a [`List<IFurnaceRecipe>`](IFurnaceRecipe).
+
+返回一个 [`List<IFurnaceRecipe>`](IFurnaceRecipe).

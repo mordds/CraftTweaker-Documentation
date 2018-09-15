@@ -20,21 +20,21 @@ PlayerInteract 实现了如下接口，能够使用如下所有的 methods，get
 
 从事件中可以获取如下信息：
 
-| ZenGetter    | Return Type                               |
-|--------------|-------------------------------------------|
-| `canceled`   | boolean                                   |
-| `usingItem`  | boolean                                   |
-| `usingBlock` | boolean                                   |
-| `x`          | int                                       |
-| `y`          | int                                       |
-| `z`          | int                                       |
-| `player`     | [IPlayer](/Vanilla/Players/IPlayer)       |
-| `world`      | [IWorld](/Vanilla/World/IWorld)           |
-| `block`      | [IBlock](/Vanilla/Blocks/IBlock)          |
-| `dimension`  | int                                       |
+| ZenGetter    | Return Type                         |
+| ------------ | ----------------------------------- |
+| `canceled`   | boolean                             |
+| `usingItem`  | boolean                             |
+| `usingBlock` | boolean                             |
+| `x`          | int                                 |
+| `y`          | int                                 |
+| `z`          | int                                 |
+| `player`     | [IPlayer](/Vanilla/Players/IPlayer) |
+| `world`      | [IWorld](/Vanilla/World/IWorld)     |
+| `block`      | [IBlock](/Vanilla/Blocks/IBlock)    |
+| `dimension`  | int                                 |
 
 ## ZenMethods
 
-- `event.cancel()` 将`canceled`设置为true。
-- `event.useBlock()` 将`usingItem`设置为true。
-- `event.useItem()` 将`usingBlock`设置为true。
+- `event.cancel()` 将`canceled`设置为 true。
+- `event.useBlock()` 将`usingItem`设置为 true。
+- `event.useItem()` 将`usingBlock`设置为 true。

@@ -1,39 +1,42 @@
-# Position 3f
+# 三维浮点位置
 
-A Position in Minecraft consists of 3 values: x, y and z.  
-A Position3f Object stores a position using those three values.
+在 Minecraft 中，一个 `Position3f` 存储了 x，y，z 这样的三维位置。
 
-## Importing the package
-It might be required for you to [import](/AdvancedFunctions/Import) the package if you encounter any issues (like casting an [Array](/AdvancedFunctions/Arrays_and_Loops)), so better be safe than sorry and add the import.  
+## 导入包
+
+如果你的脚本遇到问题，请检查是否导入了相关的包。（比如声明[数组](/AdvancedFunctions/Arrays_and_Loops)。）所以保险起见，请在一开始写脚本的时候就确保导入了可能用到的包。
+
 `import crafttweaker.util.Position3f;`
 
-## Getting a Position3f object
-You can get such an object using:
+## 获得 Position3f 实例
 
-- The `position` ZenGetter on a [IPlayer](/Vanilla/Players/IPlayer) object
-- The Position3f constructor below
-- The [IBlockPos](/Vanilla/World/IBlockPos) Position3f caster.
+你可以使用下列方法获得一个实例：
 
-## Position3f constructor
-You can create a Position3f object yourself by using the following method:
+- [玩家](/Vanilla/Players/IPlayer) 实例中的 `position` ZenGetter
+- 下面的构造器
+- [方块位置](/Vanilla/World/IBlockPos) 中的 Position3f 转换器
+
+## Position3f 构造器
+
+你可以自己使用该方法来创建一个 Position3f 实例:
 
 ```JAVA
 crafttweaker.util.Position3f.create(float x, float y, float z);
 ```
 
-The First method allows you to create a position at the given coordinates.  
-
-
 ## ZenGetters and ZenSetters
-| ZenGetter | ZenSetter | Description                    |
-|-----------|-----------|--------------------------------|
-|x          |x          | Returns the position's x value |
-|y          |y          | Returns the position's y value |
-|z          |z          | Returns the position's z value |
 
-## Casting as IBlockPos
-You can use the two ways below to cast a Position3f Object to an [IBlockPos](/Vanilla/World/IBlockPos) Object:
-Remember, for casting you need to [import](/AdvancedFunctions/Import) the type you want to cast to unless you use the full name.
+| ZenGetter | ZenSetter | 描述            |
+| --------- | --------- | --------------- |
+| x         | x         | 返回位置的 x 值 |
+| y         | y         | 返回位置的 y 值 |
+| z         | z         | 返回位置的 z 值 |
+
+## 转换到 IBlockPos
+
+你可以用下列两种方式来转换到一个 [IBlockPos](/Vanilla/World/IBlockPos) 实例：
+记住，使用 `as` 你将需要 [导入](/AdvancedFunctions/Import) 你想要转换到的类型，除非你使用它的全名。
+
 ```
 posThree.asBlockPos();
 posThree as IBlockPos;
