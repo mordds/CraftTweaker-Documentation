@@ -1,6 +1,7 @@
 # 酿造配方处理器
 
 ## 获取酿造配方处理器
+
 你可以使用[关键字段](/Vanilla/Global_Functions)`brewing`获取酿造配方处理器。
 
 ## 合成方法
@@ -13,7 +14,7 @@
 
 ### 添加酿造配方
 
-```
+```java
 //brewing.addBrew(IIngredient input, IIngredient ingredient, IItemStack output, @Optional boolean hidden);
 //input 输入
 //ingredient 材料
@@ -32,12 +33,11 @@ brewing.addBrew(<minecraft:bedrock>, [<minecraft:lapis_ore>], <minecraft:sponge:
 brewing.addBrew(<minecraft:gold_block>, [<minecraft:iron_block>, <minecraft:lapis_block>], <minecraft:sponge:1>, true);
 ```
 
-
 ### 移除酿造配方
 
-仍不兼容JEI！！
+仍不兼容 JEI！！
 
-```
+```java
 //brewing.removeRecipe(IItemStack input, IItemStack ingredient);
 //input 输入
 //ingredient 输出

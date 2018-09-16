@@ -40,7 +40,7 @@ transformedItem = item.transformConsume(3);
 
 ### 转换（Transform）
 
-旧的物品转换器（itemTransformer）可能在1.13中取消。
+旧的物品转换器（itemTransformer）可能在 1.13 中取消。
 这是一个特殊的函数。它接受两个参数：物品本身[item](IItemStack)和执行合成的玩家[player](/Vanilla/Players/IPlayer)。
 
 ```
@@ -50,7 +50,7 @@ transformedItem = item.transform(function(item, player) {return item;});
 这个函数返回一个[物品堆](IItemStack)。
 这个堆将会替换合成前在合成框架中的物品。使用`null`作为返回，会清空框架。
 
-（译者注：经过实验目前版本这个函数好像有Bug，其行为和描述并不符合。也无法返回物品。建议不要使用这个函数。）
+（译者注：经过实验目前版本这个函数好像有 Bug，其行为和描述并不符合。也无法返回物品。建议不要使用这个函数。）
 
 ### 新转换（TransformNew）
 
