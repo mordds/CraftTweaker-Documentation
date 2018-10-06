@@ -1,23 +1,18 @@
-# Logger
+# 日志记录器
 
-If the print-function is not enough for you, then you can use the logger Object to log Commands, information warnings and more.
+如果 `print` 函数对你来说不够用的话，你可以使用日志记录器 `logger`。
 
-## Accessing the Logging Handler
-You can access the Formatting Handler using the `logger` [global keyword](/Vanilla/Global_Functions/).
-
-## Logging 
+## 日志记录
 
 - logCommand(String message);
 - logInfo(String message);
 - logWarning(String message);
 - logError(String message);
 
-
-
-## Accessible, but useless Methods
+## 较少使用的方法
 
 - logError(String message, Throwable exception);
-- logPlayer([IPlayer](/Vanilla/Players/IPlayer/) player);
+- logPlayer([IPlayer](/Vanilla/Players/IPlayer) player);
 
-You can not use Java's throwables so the first Method is useless.  
-The second Method does absolutely nothing. Literally, the implementation is empty!
+你没法使用 Java 中的 Throwable 所以第一个函数没用。
+第二个函数根本就没实现~

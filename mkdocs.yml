@@ -407,7 +407,7 @@ pages:
           - PartDataPiece: 'Mods/ContentTweaker/Materials/Parts/PartDataPiece.md'
       - Chickens:
         - ChickenFactory: 'Mods/ContentTweaker/Chickens/ChickenFactory.md'
-        - ChickenRepresentation: 'Mods/ContentTweaker/Chickens/ChickenRepresentation.md
+        - ChickenRepresentation: 'Mods/ContentTweaker/Chickens/ChickenRepresentation.md'
       - 匠魂:
         - 尖括号引用:
           - 材料: 'Mods/ContentTweaker/Tinkers_Construct/Brackets/Bracket_Material.md'

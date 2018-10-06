@@ -1,37 +1,40 @@
-# ILiquidDefinition
-The ILiquidDefinition defines the liquid an [ILiquidStack](/Vanilla/Liquids/ILiquidStack/) consists of.
-Unlike the ILiquidStack, this interface allows you to change fluid properties.
+# 流体定义（ILiquidDefinition）
 
-## Importing the package
-It might be required for you to import the package if you encounter any issues (like casting an [Array](/AdvancedFunctions/Arrays_and_Loops/)), so better be safe than sorry and add the import.  
+流体定义，定义着 [流体堆](ILiquidStack) 所包含的流体。  
+不同于流体堆，这个接口能够允许你修改流体属性。
+
+## 导入相关包
+
+为了避免发生一些不期而遇的问题（比如声明[数组](/AdvancedFunctions/Arrays_and_Loops)），最为安全、也是最为推荐的方式就是导入相关的包。
 `import crafttweaker.liquid.ILiquidDefinition;`
 
-## Methods
-So, what can we do with it?
+## 方法
 
-### Multiplication
-Multiplying a ILiquidDefinition results in a new [ILiquidStack](/Vanilla/Liquids/ILiquidStack/) with the specified amount in millibuckets
+仔细想想我们能做些什么？
 
-```
+### 乘号
+
+将一个 ILiquidDefinition 用乘法会返回一个有着指定 mB 的 [ILiquidStack](ILiquidStack)，即实例化一个 ILiquidStack。
+
+```java
 val def = <liquid:lava>.definition;
 
-//essentially the same
+// 本质是一样的
 val bucketOfLava = def * 1000;
 val bucketOfLava1 = <liquid:lava> * 1000;
 ```
 
-## Get and Set fluid properties
+## 获取和设置流体属性
 
-As an ILiquidDefinition represents a liquid, you can get, but also set it's properties.
-Check the table below for further information.
+我们已经知道 ILiquidDefinition 代表了一个流体，所以你可以获取和设置它的一些属性。
+查看下面的表格来获取更多信息。
 
-Like in the table above, you set the Zengetter/Setter at the end of the ILiquidDefinition.
-Some ZenGetters have no according ZenSetter, you will need to rely on other means to alter these properties.
+像表格所说的一样，你在 ILiquidDefinition 最后使用 ZenGetter/Setter 来设置它的属性。
+但一些属性只有 Getter 而没有 Setter，所以你可能需要依赖于其他的属性来调整它们。
 
-Be careful with Zensetters though, they only alter the fluid registry and have no effect on fluids in the world.
-You will probably only need the temperature setter when messing with [Tinkers' Construct Smeltery fuels](/Mods/Modtweaker/TConstruct/Fuel/).
+这些 Setter 只对注册表中的流体有效，而不对世界中已存的流体有效。你大概只需要补全用于 [Tinkers' Construct 熔炼炉燃料](/Mods/Modtweaker/TConstruct/Fuel) 的流体温度属性。
 
-```
+```java
 val definition = <liquid:lava>.definition;
 
 //Zengetter: luminosity
@@ -41,12 +44,12 @@ val lavaL = definition.luminosity;
 definition.luminosity = 0;
 ```
 
-| Zengetter   | Zensetter   | What is this?                                            | Return/Set Type                               |
-|-------------|-------------|----------------------------------------------------------|-----------------------------------------------|
-| name        |             | This returns the unlocalized liquid name                 | string                                        |
-| displayName |             | This returns the localized liquid name                   | string                                        |
-| luminosity  | luminosity  | This returns/sets the luminosity of the referred liquid  | int                                           |
-| density     | density     | This returns/sets the density of the referred liquid     | int                                           |
-| temperature | temperature | This returns/sets the temperature of the referred liquid | int                                           |
-| viscosity   | viscosity   | This returns/sets the viscosity of the referred liquid   | int                                           |
-| gaseous     | gaseous     | This returns/sets whether the referred liquid is gaseous | boolean                                       |
+| Zengetter   | Zensetter   | 这是什么？         | 值类型  |
+| ----------- | ----------- | ------------------ | ------- |
+| name        |             | 未本地化的流体名称 | string  |
+| displayName |             | 本地化的流体名称   | string  |
+| luminosity  | luminosity  | 流体亮度           | int     |
+| density     | density     | 流体密度           | int     |
+| temperature | temperature | 流体温度           | int     |
+| viscosity   | viscosity   | 流体粘度           | int     |
+| gaseous     | gaseous     | 流体是否为气体     | boolean |

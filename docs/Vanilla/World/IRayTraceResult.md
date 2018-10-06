@@ -1,21 +1,22 @@
-# IRayTraceResult
+# 射线追踪结果
 
-When a player is looking or clicking at something he fires a ray that goes until it hits what it needs to hit, or misses.  
-The result of such a hit is an IRayTraceResult object.
+当玩家看向/点击的时候，他会有一个目标，但不一定点中了（点空气），这样的结果就是一个 IRayTraceResult。
 
-## Importing the class
-It might be required to [import](/AdvancedFunctions/Import/) the class to avoid errors.  
+## 导入包
+
+如果你的脚本遇到问题，请检查是否导入了相关的包。（比如声明[数组](/AdvancedFunctions/Arrays_and_Loops)。）所以保险起见，请在一开始写脚本的时候就确保导入了可能用到的包。
+
 `import crafttweaker.world.IRayTraceResult`
 
 ## ZenGetters
-All you can do is retrieve information from these objects, here's which:  
-Be careful though, since all getters that do not return a bool can return `null`!
 
-| name      | type                                  |
-|-----------|---------------------------------------|
-| isMiss    | bool                                  |
-| isEntity  | bool                                  |
-| isBlock   | bool                                  |
-| entity    | [IEntity](/Vanilla/Entities/IEntity/)  |
-| blockPos  | [IBlockPos](/Vanilla/World/IBlockPos/) |
-| sideHit   | [IFacing](/Vanilla/World/IFacing/)     |
+你可以获取下列信息，注意所有非 bool 字段都是可 null 的！
+
+| 名称     | 类型                                  |
+| -------- | ------------------------------------- |
+| isMiss   | bool                                  |
+| isEntity | bool                                  |
+| isBlock  | bool                                  |
+| entity   | [IEntity](/Vanilla/Entities/IEntity)  |
+| blockPos | [IBlockPos](/Vanilla/World/IBlockPos) |
+| sideHit  | [IFacing](/Vanilla/World/IFacing)     |

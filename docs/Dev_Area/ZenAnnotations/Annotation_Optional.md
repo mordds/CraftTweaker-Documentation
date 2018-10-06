@@ -1,11 +1,11 @@
-# Optional
+# 可选
 
-`@Optional` can be given to a Method parameter to declare it as being optional.  
-Optional Parameters can be omitted when calling the method:
+`@Optional` 可以应用到方法的参数上来使其变为可选参数，
+在调用时可以被省略。
 
-## Example
+## 例子
 
-[CraftTweaker's IFurnaceManager](https://github.com/jaredlll08/CraftTweaker/blob/1.12/CraftTweaker2-API/src/main/java/crafttweaker/api/recipes/IFurnaceManager.java):
+[CraftTweaker 的 IFurnaceManager](https://github.com/jaredlll08/CraftTweaker/blob/1.12/CraftTweaker2-API/src/main/java/crafttweaker/api/recipes/IFurnaceManager.java):
 
 ```
     @ZenMethod
@@ -13,42 +13,47 @@ Optional Parameters can be omitted when calling the method:
 ```
 
 [MCFurnaceManager (Implementation)](https://github.com/jaredlll08/CraftTweaker/blob/1.12/CraftTweaker2-MC1120-Main/src/main/java/crafttweaker/mc1120/furnace/MCFurnaceManager.java)
+
 ```
     @Override
     public void remove(IIngredient output, @Optional IIngredient input) {
         if(output == null)
             throw new IllegalArgumentException("output cannot be null");
-        
+
         recipesToRemove.add(new ActionFurnaceRemoveRecipe(output, input));
     }
 ```
 
-Technically, you don't need the `@Optional` in the implementation but you can add it if you want to be sure.
-You can now call this method using either one:
+理论上来说在实现中 `@Optional` 并不需要被再次应用，但你可以加上来确保有效。
+现在你可以用两种办法来调用了：
+
 ```
-furnace.remove(output); //Input will be set to null
+furnace.remove(output); //Input 将会被设置为 null
 furnace.remove(output, input);
 ```
 
-## What values are inserted for omited parameters?
-### Using only the annotation
-Inserted is either `0`, `false` or `null`, depending on the annotated Type:
+## 省略的参数会被设为什么值？
 
-Primitives will be `0` (except bool, which will be false, so technically 0 as well)  
-All Objects will be `null`
+### 注解无参数
 
-### Using annotation members
+注入 `0`, `false` 或 `null`，取决于参数类型：
 
-| Member      | Type            | Default value    |
-|-------------|-----------------|------------------|
+数值将会被设为 `0` （除了 boolean 会被设为 false，但那其实也是一种 0），
+对象将会被设为 `null`
+
+### 注解有参数
+
+| 字段        | 类型            | 默认值           |
+| ----------- | --------------- | ---------------- |
 | value       | String          | `""`             |
 | methodClass | java.lang.Class | `Optional.class` |
 | methodName  | String          | `"getValue"`     |
 
-The Optional annotation also supports default values.  
-If you want to provide a default value, you can do that by giving the `value` member a String representing the parameter.  
+Optional 注解可以接受默认值，
+可以通过 value 字段提供。
 
-If you only want a default primitive, then you are set.
+如果你需要数值，那么你可以直接设置。
+
 ```
 @ZenMethod
 public static void print(@Optional("heyho") String value) {
@@ -62,8 +67,8 @@ public static void print3(@Optional("1") int value) {
 }
 ```
 
-If you want a default object or a default primitive that is not a compiletime constant (all annotation members need to be compiletime constants!), you can set the other two members: 
-This will replace the parameter with a call to the given (static) method `methodClass.methodName(value)`. If no such method is found, will error and insert null.
+如果你需要设置一个非编译期常量 （注解中的成员必须是编译期常量！），那么你需要设置另外两个成员。
+这会调用 `methodClass.methodName(value)` 来获得一个默认值。如果没有找到这个方法则仍传入 null。
 
 ```
 @ZenMethod
@@ -77,11 +82,12 @@ public static IItemStack getFromString(String value) {
 }
 ```
 
-## What parameters can be annotated?
-All parameters can be annotated, but you need to remember that annotated parameters need to be at the end, so while this would technically work, method calls would fail:  
+## 哪些参数可以被注解？
+
+所有参数都可以，但可选参数必须要置于最后。一个错误的例子：
 
 ```
 myMethod(@Optional String name, int number)
 ```
 
-Calling this method with only an int will always fail!
+只传入一个 int 参数会发生错误！

@@ -1,13 +1,14 @@
-# IFormatter
+# 格式化
 
-## Accessing the text formatting Handler
-You can access the Formatting Handler using the `format` [global keyword](/Vanilla/Global_Functions/).
+## 访问文本格式化处理器
 
-## Formatting a text
+你可以使用 `format` [全局函数](/Vanilla/Global_Functions) 来访问。
 
-### Color
+## 格式化一个文本
 
-You can give an IFormattedText a color using one of the following Colors:
+### 颜色
+
+你可以给予 IFormattedText 下列的任何一种颜色。
 
 - black
 - darkBlue
@@ -26,10 +27,9 @@ You can give an IFormattedText a color using one of the following Colors:
 - yellow
 - white
 
+### 样式
 
-### Style
-
-You can give an IFormattedText one (or more) of the following formatting styles:
+你可以给予 IFormattedText 下列的一种或一种以上样式。
 
 - obfuscated
 - bold

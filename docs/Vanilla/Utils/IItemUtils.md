@@ -1,19 +1,20 @@
-# IItemUtils
+# 物品实用工具（IItemUtils）
 
-The ItemUtils interface provides various item utils.  
-It can be accessed using the `items` keyword.
+物品实用工具提供了一些对物品的实用工具，可以通过`items`来访问。
 
-## Creating Potions
-The createPotions function allows you to create custom potions.  
-Returns the potion as [IItemStack](/Vanilla/Items/IItemStack/).  
-As the Parameter for this function is a vararg, you can either provide one Object[][] or many Object[].  
-In both cases each Object[] needs to contain
+## 创建药水
 
-1. An [IPotion](/Vanilla/Potions/IPotion/)
-2. An int describing the effect amplifier/strength
-3. An int describing the effect duration.  
+`createPotions` 方法允许你创建自定义药水，将返回一个 [IItemStack](/Vanilla/Items/IItemStack)。
+因为参数是一个可变参数，你可以提供一个 `Object[][]` 或多个 `Object[]`。
+两种情况中的数组都必须包含：
 
-If an Object[] is not of this length or not in this order, it will be ignored.
+1. 一个 [IPotion](/Vanilla/Potions/IPotion)
+2. 一个 int，即药水等级
+3. 一个 int，即药水的持续时间
+
+如果一个 Object[] 不符合上面的条件或顺序，它将会被忽略。
+
+一个例子：
 
 ```JAVA
 //createPotion(Object[]...);
@@ -22,26 +23,28 @@ If an Object[] is not of this length or not in this order, it will be ignored.
 val potion = itemUtils.createPotion([[<potion:minecraft:strength>, 1, 1]]);
 ```
 
-## Get Items by name
-These two functions both return an [IItemStack](/Vanilla/Items/IItemStack/)[] containing all matching items.  
-The first checks against the items' registry names, the 2nd uses the unlocalized names.
+## 通过名称获取物品
+
+这两个方法都返回所有符合正则表达式匹配的 [IItemStack](/Vanilla/Items/IItemStack)[]。
+第一个检查物品的 `registryName`，第二个检查物品的 `unlocalizedName`。
 
 ```Java
 //getItemsByRegexRegistryName(String Regex)
-itemUtils.getItemsByRegexRegistryName(".*sword.*"); // all things that have sword in the name
-itemUtils.getItemsByRegexRegistryName(".*thermal.*"); // all thermal expansion/foundation/dynamics items
+itemUtils.getItemsByRegexRegistryName(".*sword.*"); // 所有在名称中包含 sword 的物品
+itemUtils.getItemsByRegexRegistryName(".*thermal.*"); // 所有 thermal expansion/foundation/dynamics 物品
 
 //getItemsByRegexUnlocalizedName(String Regex)
-itemUtils.getItemsByRegexUnlocalizedName(".*pink.*"); // pink things!! <3
+itemUtils.getItemsByRegexUnlocalizedName(".*pink.*"); // 粉的！粉的！（
 ```
 
-## Create Spawn egg
-The createSpawnEgg function allows you to create custom mod spawn eggs.  
-The customNBT is OPTIONAL and can override the entity tag.  
-Returns the spawn eff as [IItemStack](/Vanilla/Items/IItemStack/).
+## 创建刷怪蛋
+
+`createSpawnEgg` 方法允许你创建自定义的刷怪蛋，
+`customNBT` 是可选的，重写实体 NBT 标签的参数。
+返回一个 [IItemStack](/Vanilla/Items/IItemStack)。
 
 ```JAVA
 //createSpawnEgg(entity, @optional customNBT)
-//NBT overrides entity (this creates a creeper egg!)
+//重写了NBT，生成了一个没有AI的爬行者刷怪蛋！
 val egg = itemUtils.createSpawnEgg(<entity:minecraft:sheep>, {EntityTag:{id:"minecraft:creeper",NoAI:1 as byte,PersistenceRequired:1 as byte}});
 ```

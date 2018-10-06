@@ -1,22 +1,23 @@
-# Basic variable functionality
+# 基本变量功能
 
-The most basic variable types of ZenScript are Strings, Integers and booleans.
+ZenScript 中最常用的就是数值，字符串以及布尔值了。
 
-## Most single types
-`true == true` You can check if two values are the same.  
-`"Hello" != "World"` You can also check if two values are unequal.
+## 大多数单实例类型
 
-## Strings
-Strings provide some functionality
+`true == true` 你可以比较两个对象是否相同。
+`"Hello" != "World"` 也可以比较两个对象是否不同。
 
-`"Hello".length` Returns the string's length as int.  
-`"Hello"[1]` Returns the character at the string's given index as another string.  
-`"Hello" in "Hell"` checks if the string before `in` contains the string after it as boolean. You can replace the `in` with `has` if you like that better.  
-`"Hel" ~ "lo " + "World"` You also can add/concatenate strings.
-`string += "assignAdd"` you can also use the assignAdd/assignConcatenate operators.
+## 字符串
 
-Aside from these, all parameterless methods that are available to java Strings are also available to ZenScript strings!  
-This includes: 
+字符串提供了一些功能：
+
+- `"Hello".length` 返回字符串的长度
+- `"Hello"[1]` 以另一个字符串的形式返回字符串中的某一个字符。
+- `"Hello" in "Hell"` 检查在 `in` 之前的字符串是否包含关键字之后字符串的内容。 也可以用 `has` 代替。
+- `"Hel" ~ "lo " + "World"` 你也可以连接字符串。
+- `string += "assignAdd"` 也可以使用自增。
+
+同时，Java 中的所有方法也同样适用于 ZenScript 中的字符串！它们有：
 
 - toLowerCase
 - toUpperCase
@@ -27,23 +28,25 @@ This includes:
 - toCharArray
 - trim
 
-## Integers
-Integers provide some functionality
+## 数值
 
-`+-*/%` Basic mathematic operators (check the [variable Types](Variable_Types) page). You can also use the operatorAssign tokens  
-`0 to 10` Returns an Integer Range ranging from 0 to 10.  
-`1~10` Concatenates the Integers (returns "110").  
+数值提供了一些功能：
 
+- `+-*/%` 基本计算符号 (在 [变量类型处理](Variable_Types) 中有介绍)，也可以使用 `operatorAssign` 符号。
+- `0 to 10` 返回一个从 0 到 10 的范围。
+- `1~10` 串联数值 (返回 `"110"`).
 
-## Booleans
-Booleans provide some functionality
+## 布尔值
 
-`true ~ false` Concatenates the booleans (returns "truefalse").  
-`& | ^` Boolean operators (and/or/xor).  
+布尔值提供了一些功能：
 
-## Arrays/ArrayLists
-Arrays and ArrayLists provide common functions
+- `true ~ false` (返回 `"truefalse"`).
+- `& | ^` 布尔值操作 (与/或/或非).
 
-`array[1]` returns the item at the given index.  
-`array[1] = "Hello"` Sets the item at the given index.  
-`array.length` returns the arrays length
+## 数组/列表
+
+数组和列表都提供了一些功能：
+
+- `array[1]` 返回指定位置的值。
+- `array[1] = "Hello"` 设置指定位置的值。
+- `array.length` 返回数组长度。

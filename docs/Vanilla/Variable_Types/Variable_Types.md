@@ -1,31 +1,31 @@
-# Variable Types
+# 变量类型处理
 
-As you surely already messed a bit with variables and values, you must've wondered, how CraftTweaker knows whether it's dealing with an Integer, an Item or an oreDic entry?
+你肯定在 CraftTweaker 对于变量的处理上有了一些混乱，想知道 CT 是怎么分清数值，物品和矿物辞典条目的？
 
-The easiest way of declaring a variable is using ```var name = value;```. 
-This  creates the variable and casts it to the value it thinks is most fitting for the situation.
+最基本的变量定义方式就是 `var name = value;`。
+它创建了一个变量并赋予变量看起来最适合这个值的类型。
 
-## Casting a variable to a specific type
+## 将变量转换为指定的类型
 
-More complex scripts might require you to cast a variable as a specific type.
-For example, this would fail:
+更复杂的脚本要求你从一个类型转换为另一个类型。
+例如：下面的代码会报错：
 
-```
+```java
 var test;
 
 test = <minecraft:dirt>;
 recipes.remove(test);
 ```
 
-So why does this fail?
-This is because CT casts variables that aren't given a start value to the IAny Type.
-That type was made to facilitate some recipe handlers, though never really implemented, so it sometimes does more harm than good. It was originally intended as a type that can take the form of most other types so you don't need to change variables all the time, but the interface never got implemented.
+所以为什么这行不通呢？
+这是因为 CT 将定义时未赋初值的变量设定为了 IAny 类型。
+这种类型是为了方便一些配方处理程序而引入的（这样就不用转换来转换去了），它没有任何功能，所以它有时弊大于利。它相当于 ZenScript 中所有类的基类。
 
-Back to the topic:
-How can we fix this issue? By casting the variable test to ```IItemStack```, which is the type used for items.
-Unfortunately, some types need to be imported first, and this is one of those.
+回到我们的主题：
+如何解决这个问题呢？你会想到将变量转换为用于物品的 `IItemStack` 类型。
+不幸的是，有些类型需要被导入，而这个类型就是其中一员。
 
-```
+```java
 import crafttweaker.item.IItemStack;
 var test as IItemStack;
 
@@ -33,23 +33,23 @@ test = <minecraft:dirt>;
 recipes.remove(test);
 ```
 
-## List of Variable Types
+## 变量类型
 
-Here's an (incomplete) List of most variable types
+这是一个大概的变量类型列表
 
-| Name (Name in CT)                                     | Explanation                                                                                                 | Example                                        | Import                                   |
-|-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|------------------------------------------------|------------------------------------------|
-| Integer (int)                                         | Integers are whole Numbers (e.g. 1,2,3,...), caps at 2 147 483 647                                          | `var test = 10 as int;`                        |                                          |
-| [IItemStack](/Vanilla/Items/IItemStack/)               | Single items                                                                                                | `var test = <minecraft:dirt> as IItemStack;`   | import crafttweaker.item.IItemStack;     |
-| [IIngredient](/Vanilla/Variable_Types/IIngredient/) | Single or Multiple Items (e.g. `<minecraft:dirt>`, `<ore:ingotIron>`,...)                                   | `var test = <minecraft:dirt> as IIngredient;`  | import crafttweaker.item.IIngredient;    |
-| [IOreDictEntry](/Vanilla/OreDict/IOreDictEntry/)       | Multiple Items from an OreDict (e.g. `<ore:ingotIron>`, `<ore:ingotGold>`,...)                              | `var test = <ore:ingotIron> as IOreDictEntry;` | import crafttweaker.oredict.IOreDictEntry|
-| Boolean (bool)                                        | Booleans are either true or false.                                                                          | `var test = false as bool;`                    |                                          |
-| Byte (byte)                                           | Bytes values are whole numbers from 0 to 255 ()                                                             | `var test = 125 as byte;`                      |                                          |
-| Floating Point (float)                                | Decimals                                                                                                    | `var test = 1.25 as float;`                    |                                          |
-| Double Precision (double)                             | Like Floating Points, just more precise and with a higher number range                                      | `var test = 1.25 as double;`                   |                                          |
-| Long (long)                                           | Like Integer, but with a higher number range (usually int is just fine)                                     | `var test = 30 as long;`                       |                                          |
-| Null (null)                                           | Null, nothing, nada. Not really a type but still useful                                                     | `var test = null;`                             |                                          |
-| Short (short)                                         | Like Integer, but with a smaller number Range                                                               | `var test = 16 as short;`                      |                                          |
-| String (string)                                       | A string is a text. Here you usually won't need the "as" as anything in "s is automatically a string.       | `var test = "Hello World!" as string;`         |                                          |
-| Void (void)                                           | Even less than null. You will probably only need the void type when dealing with functions                  | `var test as void;`                            |                                          |
-| [ILiquidStack](/Vanilla/Liquids/ILiquidStack/)         | Same as IItemStack, only for liquids                                                                        | `var test = <liquid:water> as ILiquidStack;`   | import crafttweaker.liquid.ILiquidStack; |
+| 类名 （CT 中的名称）                                  | 解释                                                               | 例子                                           | 导入                                      |
+| ----------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------- | ----------------------------------------- |
+| Integer (int)                                         | 32 位整数                                                          | `var test = 10 as int;`                        |                                           |
+| [IItemStack](/Vanilla/Items/IItemStack)               | 单个物品                                                           | `var test = <minecraft:dirt> as IItemStack;`   | import crafttweaker.item.IItemStack;      |
+| [IIngredient](/Vanilla/Variable_Types/Variable_Types) | 单个或多个物品 (如 `<minecraft:dirt>`, `<ore:ingotIron>`,...)      | `var test = <minecraft:dirt> as IIngredient;`  | import crafttweaker.item.IIngredient;     |
+| [IOreDictEntry](/Vanilla/OreDict/IOreDictEntry)       | 矿物辞典中的多个物品 (如 `<ore:ingotIron>`, `<ore:ingotGold>`,...) | `var test = <ore:ingotIron> as IOreDictEntry;` | import crafttweaker.oredict.IOreDictEntry |
+| Boolean (bool)                                        | 真或假                                                             | `var test = false as bool;`                    |                                           |
+| Byte (byte)                                           | 0 ~ 255 之间的整数                                                 | `var test = 125 as byte;`                      |                                           |
+| Floating Point (float)                                | 单精度浮点数                                                       | `var test = 1.25 as float;`                    |                                           |
+| Double Precision (double)                             | 双精度浮点数                                                       | `var test = 1.25 as double;`                   |                                           |
+| Long (long)                                           | 64 位整数                                                          | `var test = 30 as long;`                       |                                           |
+| Null (null)                                           | 空                                                                 | `var test = null;`                             |                                           |
+| Short (short)                                         | 16 位整数                                                          | `var test = 16 as short;`                      |                                           |
+| String (string)                                       | 字符串，""中的任何东西都是字符串所以你基本不用转换                 | `var test = "Hello World!" as string;`         |                                           |
+| Void (void)                                           | 跟函数打交道的时候才会用到，空返回值                               | `var test as void;`                            |                                           |
+| [ILiquidStack](/Vanilla/Liquids/ILiquidStack)         | 对于流体来说的一种 ItemStack                                       | `var test = <liquid:water> as ILiquidStack;`   | import crafttweaker.liquid.ILiquidStack;  |
