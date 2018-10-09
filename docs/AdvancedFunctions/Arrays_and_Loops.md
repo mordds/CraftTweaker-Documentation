@@ -108,7 +108,7 @@ for i, item in IArray {
 	//定义一个变量叫做“item”，遍历 IArray 中的每一个元素（就是类似于 <minecraft:dirt>,<minecraft:planks>,<minecraft:diamond> 这样的东西）
 	//然后就能用这些变量了！
 
-	//使用 JArry 数组的物品和 KArray 数组的物品来合成 IArray 数组中的物品（比如泥土由玻璃和木斧合成，木板由木头和金锄合成，钻石由金锭和绿宝石合成）
+	//使用 JArry 数组的物品和 KArray 数组的物品来合成 IArray 数组中的物品（比如泥土由草地和木斧合成，木板由木头和金铲合成，钻石由金锭和绿宝石合成）
 	recipes.addShapeless(item,[JArray[i],KArray[i]]);
 }
 
