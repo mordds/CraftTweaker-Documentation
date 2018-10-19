@@ -232,10 +232,10 @@ pages:
         - 祭坛: 'Mods/Astral_Sorcery/Altar.md'
         - 砂轮: 'Mods/Astral_Sorcery/Grindstone.md'
         - 聚星缸: 'Mods/Astral_Sorcery/Well.md'
-        - Liquid Interaction: 'Mods/Astral_Sorcery/LiquidInteraction.md'
+        - 流体交互: 'Mods/Astral_Sorcery/LiquidInteraction.md'
         - 星能聚合: 'Mods/Astral_Sorcery/Infusion.md'
         - 星辉转化: 'Mods/Astral_Sorcery/Transmutation.md'
-        - Util: 'Mods/Astral_Sorcery/Util.md'
+        - 其他功能: 'Mods/Astral_Sorcery/Util.md'
     - CompatSkills:
       - CompatSkills: 'Mods/CompatSkills/CompatSkills.md'
       - 需求:
