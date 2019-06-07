@@ -1,6 +1,6 @@
 # 磨粉机
 
-## 包
+## 相关包
 `mods.thermalexpansion.Pulverizer`
 
 ## 添加
@@ -12,7 +12,7 @@ mods.thermalexpansion.Pulverizer.addRecipe(IItemStack output, IItemStack input, 
 mods.thermalexpansion.Pulverizer.addRecipe(<minecraft:diamond>, <minecraft:stick>, 1500, <minecraft:stone>, 20);
 ```
 
-## Removal
+## 移除
 
 ```
 //mods.thermalexpansion.Pulverizer.removeRecipe(输入物品);
